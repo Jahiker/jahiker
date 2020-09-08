@@ -1,16 +1,28 @@
-### Hi there 👋
+# Jahiker Rojas - Junior Web Developer :man: :computer:
 
-<!--
-**Jahiker/jahiker** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+:dart: Currently looking for my first job as a Web Developer
 
-Here are some ideas to get you started:
+### Knowleges :brain:
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+- HTML
+- CSS
+- JavaScript
+- Bootstrap
+- Materialize
+- VueJs
+- Vue Router
+- Vuex
+- Vuetify
+- PHP
+- Laravel
+- MySql
+- MongoDb
+
+### Currently learning :nerd_face:
+
+- React Js
+- Node Js
+
+### Find me on Twitter :bird:
+
+- https://twitter.com/Jahiker
