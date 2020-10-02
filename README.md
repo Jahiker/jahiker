@@ -7,6 +7,7 @@
 - HTML
 - CSS
 - JavaScript
+- Sass
 - Bootstrap
 - Materialize
 - VueJs
