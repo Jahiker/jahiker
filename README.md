@@ -15,6 +15,7 @@
 - Vuetify
 - PHP
 - Laravel
+- Wordpress
 - MySql
 - MongoDb
 
