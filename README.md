@@ -6,10 +6,11 @@
 
 - HTML
 - CSS
-- JavaScript
 - Sass
 - Bootstrap
 - Materialize
+- JavaScript
+- JQuery
 - VueJs
 - Vue Router
 - Vuex
@@ -18,12 +19,12 @@
 - Laravel
 - Wordpress
 - MySql
-- MongoDb
 
 ### Currently learning :nerd_face:
 
 - React Js
 - Node Js
+- MongoDb
 
 ### Find me on Twitter :bird:
 
