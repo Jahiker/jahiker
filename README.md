@@ -1,6 +1,6 @@
 # Jahiker Rojas - Web Developer :man: :computer:
 
-:dart: Currently looking for my first job as a Web Developer
+:dart: Improving every day
 
 ### Knowleges :brain:
 
