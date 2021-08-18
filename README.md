@@ -7,6 +7,8 @@
 - HTML
 - CSS
 - Sass
+- Less
+- Stylus
 - Bootstrap
 - Materialize
 - JavaScript
