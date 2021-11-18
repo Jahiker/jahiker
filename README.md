@@ -20,6 +20,8 @@
 - PHP
 - Laravel
 - Wordpress
+- Shopify
+- Liquid
 - MySql
 
 ### Currently learning :nerd_face:
