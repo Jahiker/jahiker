@@ -1,7 +1,14 @@
 $colorPrimary: #000000;
 $colorSecondary: #FFFFFF;
+$colorThird: #fc0000;
 
 body {
     background-color: $colorPrimary;
     color: $colorSecondary;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: $colorThird;
 }
