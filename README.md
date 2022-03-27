@@ -12,6 +12,7 @@
 - Bootstrap
 - Materialize
 - JavaScript
+- Webpack
 - JQuery
 - VueJs
 - Vue Router
