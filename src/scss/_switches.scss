@@ -1,0 +1,48 @@
+.switches {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+
+  .theme {
+    input[type="checkbox"] {
+      appearance: none;
+    }
+
+    input[type="checkbox"] ~ ion-icon[name="sunny"] {
+      display: block;
+    }
+
+    input[type="checkbox"] ~ ion-icon[name="moon"] {
+      display: none;
+    }
+
+    input[type="checkbox"]:checked ~ ion-icon[name="sunny"] {
+      display: none;
+    }
+
+    input[type="checkbox"]:checked ~ ion-icon[name="moon"] {
+      display: block;
+    }
+
+    ion-icon {
+      width: 2.5em;
+      height: 2.5em;
+      svg {
+        height: 100%;
+      }
+    }
+  }
+
+  .lang {
+    height: 30px;
+    border-radius: 5px;
+    background: var(--colorFourth);
+
+    option {
+        background-color: var(--colorFont);
+        color: var(--colorBg);
+    }
+  }
+}
