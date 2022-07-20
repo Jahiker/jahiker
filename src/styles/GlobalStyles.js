@@ -13,5 +13,6 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 62.5%;
         background-color: #000;
         color: #fff;
+        font-family: 'Josefin Sans', sans-serif;
     }
 `

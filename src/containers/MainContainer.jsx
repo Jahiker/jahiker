@@ -1,7 +1,10 @@
 import React from 'react'
+import { Main } from './styles'
 
-export const MainContainer = () => {
+export const MainContainer = (props) => {
   return (
-    <div>MainContainer</div>
+    <Main>
+      { props.children }
+    </Main>
   )
 }

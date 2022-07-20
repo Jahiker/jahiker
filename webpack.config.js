@@ -10,6 +10,9 @@ module.exports = {
   },
   resolve: {
     extensions: [".js", ".jsx"],
+    alias: {
+      '@images': path.resolve(__dirname, 'src/assets/img/')
+    }
   },
   module: {
     rules: [
@@ -22,6 +25,10 @@ module.exports = {
         test: /\.html$/,
         use: [{ loader: "html-loader" }],
       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/,
+        type: 'asset'
+      }
     ],
   },
   plugins: [
