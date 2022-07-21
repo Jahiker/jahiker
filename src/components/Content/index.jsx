@@ -1,8 +1,15 @@
-import React from 'react';
-import { Content as Main } from './styles';
+import React from "react"
+import { Content as Main, Button } from "./styles"
 
 export const Content = () => {
   return (
-    <Main>index</Main>
+    <Main>
+        <h1>Jahiker Rojas</h1>
+        <h4>Frontend Web Developer</h4>
+        <p>Site under construction!!!</p>
+        <Button href="https://github.com/Jahiker" target="__blank" rel="noopener" primary>
+          GitHub
+        </Button>
+    </Main>
   )
 }

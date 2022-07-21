@@ -5,7 +5,7 @@ export const Main = styled.div`
     min-height: 100vh;
     padding: 20px;
     display: grid;
-    grid-template-columns: 100px 1fr;
+    grid-template-columns: 80px 1fr;
     grid-template-rows: 80px 1fr;
     grid-template-areas: "sidebar header"
                          "sidebar content";
