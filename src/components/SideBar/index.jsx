@@ -42,19 +42,19 @@ export const SideBar = () => {
           </a>
         </li>
         <li>
-          <a href="#"  title='Contact me'>
+          <a href="mailto:rojasjahiker@gmail.com" target="__blank" rel="noopener" title='Mail me'>
             <BiMessageSquareDetail size="30" />
             { open && <span>Mail me</span> }
           </a>
         </li>
         <li>
-          <a href="#"  title='Contact me'>
+          <a href="https://api.whatsapp.com/send?phone=584244245378&text=Hola!%20Vendo%20desde%20tu%20sitio%20web." title='WhatsApp me' target="__blank" rel="noopener">
             <IoLogoWhatsapp size="30" />
             { open && <span>WhatsApp me</span> }
           </a>
         </li>
         <li>
-          <a href="#"  title='Contact me'>
+          <a href="#"  title='Social networks'>
             <TiSocialAtCircular size="30" />
             { open && <span>Social networks</span> }
           </a>
