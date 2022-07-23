@@ -48,7 +48,7 @@ export const SideBar = () => {
           </a>
         </li>
         <li>
-          <a href="https://api.whatsapp.com/send?phone=584244245378&text=Hola!%20Vendo%20desde%20tu%20sitio%20web." title='WhatsApp me' target="__blank" rel="noopener">
+          <a href="https://api.whatsapp.com/send?phone=584244245378&text=Hola%20Jahiker!%20Vengo%20desde%20tu%20sitio%20web." title='WhatsApp me' target="__blank" rel="noopener">
             <IoLogoWhatsapp size="30" />
             { open && <span>WhatsApp me</span> }
           </a>
