@@ -35,6 +35,7 @@ export const Settings = styled.span`
     width: 50px;
     height: 50px;
     position: relative;
+    color: var(--color-primary);
 
     FiSettings {
         font-size: 3rem;
@@ -44,16 +45,22 @@ export const Settings = styled.span`
 export const SettingsPanel = styled.div`
     padding: 10px;
     width: 100px;
-    background-color: rgba(255,255,255,0.3);
     position: absolute;
     bottom: -35px;
     left: -120%;
     border-radius: 10px;
+    background-color: rgba(255,255,255,0.3);
 
     &::before {
         content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
     }
-    filter: blur(5px);
 
     button {
         background-color: transparent;

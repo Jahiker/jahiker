@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 export const Menu = styled.aside`
     grid-area: sidebar;
-    background-color: #B4C33A;
+    background-color: var(--color-primary);
     border-radius: 20px;
     padding: 10px;
     display: flex;
@@ -26,7 +26,7 @@ export const Toggle = styled.label`
     margin-left: 4px;
 
     svg {
-        color: #000;
+        color: var(--color-dark);
     }
 `
 
@@ -51,7 +51,7 @@ export const MenuList = styled.ul`
             justify-content: center;
             align-items: center;
             text-decoration: none;
-            color: #fff;
+            color: var(--color-light);
             width: 100%;
             
             svg {
