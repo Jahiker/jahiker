@@ -3,38 +3,38 @@ import styled, {css} from "styled-components";
 export const TitleStyled = styled.div`
   h1 {
     margin: 25px 0;
-    font-size: 35px;
-    line-height: 45px;
+    font-size: 3.5rem;
+    line-height: 4.5rem;
   }
 
   h2 {
     margin: 14px 0;
-    font-size: 24px;
-    line-height: 34px;
+    font-size: 2.4rem;
+    line-height: 3.4rem;
   }
 
   h3 {
     margin: 10px 0;
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 2rem;
+    line-height: 3rem;
   }
 
   h4 {
     margin: 8px 0;
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
   }
 
   h5 {
     margin: 6px 0;
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
   }
 
   h6 {
     margin: 4px 0;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
   }
 
   ${props => props.primary && css`

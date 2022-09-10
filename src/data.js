@@ -18,6 +18,7 @@ import mysql from "@logos/mysql.png"
 
 export const aboutMe = {
   name: "Jahiker Rojas",
+  
 };
 
 export const skillsItems = [
