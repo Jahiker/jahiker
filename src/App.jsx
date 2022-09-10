@@ -6,7 +6,7 @@ import { GlobalStyle } from './styles/GlobalStyles';
 // Components
 import { MainContainer } from './containers/MainContainer';
 import { SideBar } from './components/SideBar';
-import { Content } from './components/Content';
+import { Content } from './containers/Content'
 import { Header } from './components/Header';
 
 export const App = () => {

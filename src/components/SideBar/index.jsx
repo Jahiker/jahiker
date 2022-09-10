@@ -30,9 +30,9 @@ export const SideBar = () => {
           </a>
         </li>
         <li>
-          <a href="#" title='Knowledge'>
+          <a href="#skills" title='Knowledge'>
             <BiBrain size="30" />
-            { open && <span>Knowledge</span> }
+            { open && <span>Skills</span> }
           </a>
         </li>
         <li>

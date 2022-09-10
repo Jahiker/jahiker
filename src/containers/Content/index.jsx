@@ -1,6 +1,6 @@
 import React from "react"
 import { Content as Main, Button } from "./styles"
-import { Skills } from "../Skills"
+import { Skills } from "../../components/Skills"
 
 export const Content = () => {
   return (

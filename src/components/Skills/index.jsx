@@ -1,70 +1,46 @@
-import React, { Fragment } from "react";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/react-splide/css";
+import React from "react";
 
-import "./styles.css";
-import { Card } from "./styles";
+import { Section } from "../Section";
+import { Title } from "../Title";
+import { Slider } from "../Slider";
 
-import html from "@logos/html.png";
-import css from "@logos/css.png";
-import js from "@logos/js.png";
+import { skillsItems } from "../../data";
 
 export const Skills = () => {
+
+  const items = skillsItems;
 
   const options = {
     rewind: true,
     width: '80vw',
     gap: "1rem",
     type: "loop",
-    perPage: 3,
+    autoplay: 'play',
+    perPage: 5,
     perMove: 1,
     pagination: false,
     breakpoints: {
+      1025: {
+        perPage: 4,
+        width: '75vw'
+      },
       769: {
-        perPage: 2,
-        width: '60vw'
+        perPage: 3,
+        width: '70vw'
       },
       426: {
-        perPage: 1,
+        perPage: 2,
         width: '60vw'
       },
     }
   };
 
   return (
-    <div id="skills">
-      <Splide
-        aria-label="My Favorite Images"
-        options={options}
-      >
-        <SplideSlide>
-          <Card>
-            <a href="#">
-              <figure>
-                <img src={html} alt="Image 1" />
-              </figure>
-            </a>
-          </Card>
-        </SplideSlide>
-        <SplideSlide>
-          <Card>
-            <a href="#">
-              <figure>
-                <img src={css} alt="Image 2" />
-              </figure>
-            </a>
-          </Card>
-        </SplideSlide>
-        <SplideSlide>
-          <Card>
-            <a href="#">
-              <figure>
-                <img src={js} alt="Image 3" />
-              </figure>
-            </a>
-          </Card>
-        </SplideSlide>
-      </Splide>
-    </div>
+    <Section id="skills">
+      <div className="header">
+        <Title text={"My Skills"} h2 />
+      </div>
+      <Slider items={items} options={options} label="My Skills" />
+    </Section>
   );
 };
