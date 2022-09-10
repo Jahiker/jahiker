@@ -10,29 +10,32 @@ import css from "@logos/css.png";
 import js from "@logos/js.png";
 
 export const Skills = () => {
+
+  const options = {
+    rewind: true,
+    width: '80vw',
+    gap: "1rem",
+    type: "loop",
+    perPage: 3,
+    perMove: 1,
+    pagination: false,
+    breakpoints: {
+      769: {
+        perPage: 2,
+        width: '60vw'
+      },
+      426: {
+        perPage: 1,
+        width: '60vw'
+      },
+    }
+  };
+
   return (
     <div id="skills">
       <Splide
         aria-label="My Favorite Images"
-        options={{
-          rewind: true,
-          width: '80vw',
-          gap: "1rem",
-          type: "loop",
-          perPage: 3,
-          perMove: 1,
-          pagination: false,
-          breakpoints: {
-            769: {
-              perPage: 2,
-              width: '600px'
-            },
-            426: {
-              perPage: 1,
-              width: '300px'
-            },
-          }
-        }}
+        options={options}
       >
         <SplideSlide>
           <Card>

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Card = styled.div`
     width: 100%;
-    height: 200px;
+    aspect-ratio: 1 / 1;
 
     a {
         display: flex;
@@ -25,8 +25,6 @@ export const Card = styled.div`
         img {
             width: auto;
             height: 120px;
-            /* object-fit: contain;
-            object-position: center; */
         }
     }
 `
