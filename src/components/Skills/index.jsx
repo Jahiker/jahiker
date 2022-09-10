@@ -23,9 +23,13 @@ export const Skills = () => {
           perMove: 1,
           pagination: false,
           breakpoints: {
-            768: {
+            769: {
               perPage: 2,
-              width: 600
+              width: '600px'
+            },
+            426: {
+              perPage: 1,
+              width: '300px'
             },
           }
         }}
