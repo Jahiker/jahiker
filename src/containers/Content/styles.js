@@ -6,7 +6,7 @@ export const Content = styled.div`
 
     h1 {
         font-size: 4rem;
-        color: #B4C33A;
+        color: var(--color-primary);
         margin-bottom: 5px;
     }
 
@@ -32,15 +32,15 @@ export const Button = styled.a`
     font-weight: 500;
     text-decoration: none;
     font-size: 1.6rem;
-    background-color: #fff;
-    color: #000;
+    background-color: var(--color-light);
+    color: var(--color-dark);
 
     ${props => props.primary && css`
-        background-color: #B4C33A;
-        color: #fff;
+        background-color: var(--color-primary);
+        color: var(--color-light);
 
         &:hover {
-            background-color: #6c7424;
+            background-color: var(--color-primary-dark);
         }
     `}
 `

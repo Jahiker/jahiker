@@ -1,5 +1,6 @@
 import React from "react"
 import { Content as Main, Button } from "./styles"
+import { Skills } from "../../components/Skills"
 
 export const Content = () => {
   return (
@@ -10,6 +11,7 @@ export const Content = () => {
         <Button href="https://github.com/Jahiker" target="__blank" rel="noopener" primary>
           GitHub
         </Button>
+        <Skills />
     </Main>
   )
 }
