@@ -1,23 +1,21 @@
-import React, { Fragment } from 'react'
+import { createHashRouter, RouterProvider } from 'react-router-dom'
+import { Home } from './pages'
 
-// Styles
-import { GlobalStyle } from './styles/GlobalStyles';
+const router = createHashRouter([
+  {
+    path: '/',
+    element: <Home />
+  }
+])
 
-// Components
-import { MainContainer } from './containers/MainContainer';
-import { SideBar } from './components/SideBar';
-import { Content } from './containers/Content'
-import { Header } from './components/Header';
-
-export const App = () => {
+function App () {
   return (
-    <Fragment>
-        <GlobalStyle />
-          <MainContainer>
-            <SideBar />
-            <Header />
-            <Content />
-          </MainContainer>
-    </Fragment>
+    <RouterProvider router={router}>
+      <div className='App bg-primary min-h-screen'>
+        <h1>App</h1>
+      </div>
+    </RouterProvider>
   )
 }
+
+export default App
