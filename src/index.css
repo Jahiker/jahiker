@@ -40,6 +40,23 @@
 @tailwind components;
 @tailwind utilities;
 
+.pill-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pill-hero::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url('/src/assets/images/img-01.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 html,
 body {
   font-family: "Monument Extended", "Trebuchet MS", "Lucida Sans Unicode",
