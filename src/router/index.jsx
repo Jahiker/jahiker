@@ -7,7 +7,7 @@ import { Loader } from '../components'
 const Root = lazy(() => import('../layout/Root'))
 
 const Home = lazy(() => import('../pages/Home'))
-const About = lazy(() => import('../pages/About'))
+const Skills = lazy(() => import('../pages/Skills'))
 const Experience = lazy(() => import('../pages/Experience'))
 const Projects = lazy(() => import('../pages/Projects'))
 const Contact = lazy(() => import('../pages/Contact'))
@@ -23,8 +23,8 @@ export const router = createHashRouter([
         element: <Home />
       },
       {
-        path: '/about',
-        element: <About />
+        path: '/skills',
+        element: <Skills />
       },
       {
         path: '/experience',
