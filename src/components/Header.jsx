@@ -37,11 +37,17 @@ export const Header = () => {
           <h2 className='text-[16px] w-[115px] text-left'>Web Developer</h2>
         </div>
       </NavLink>
+      <nav className='hidden md:flex justify-end gap-4'>
+        {mainMenu && (
+          mainMenu.map((item, index) => (<NavLink key={`item-menu-${index}`} to={item.to} className='text-[16px] md:text-[12px] font-extralight hover:text-primary hover:bg-black'>{item.label}</NavLink>))
+        )}
+      </nav>
+
       <motion.nav
         initial={false}
         variants={mobileMenu}
         animate={openMenu ? 'open' : 'closed'}
-        className={`mobile-menu md:flex justify-end gap-4 ${openMenu ? 'flex flex-col absolute top-[100%] right-10 p-5 md:p-3 rounded-lg shadow-md' : 'hidden'}`}
+        className={`mobile-menu justify-end gap-4 ${openMenu ? 'flex flex-col absolute top-[100%] right-10 p-5 md:p-3 rounded-lg shadow-md' : 'hidden'}`}
       >
         {mainMenu && (
           mainMenu.map((item, index) => (<NavLink key={`item-menu-${index}`} to={item.to} className='text-[16px] md:text-[12px] font-extralight hover:text-primary hover:bg-black'>{item.label}</NavLink>))
