@@ -5,7 +5,7 @@ const Root = () => {
   return (
     <div className='bg-primary min-h-screen'>
       <Header />
-      <main className='max-w-[1200px] mx-auto p-[40px] min-h-screen'>
+      <main className='max-w-[1200px] mx-auto px-[10px] py-[30px] md:p-[40px] min-h-screen'>
         <Outlet />
       </main>
       <Footer />

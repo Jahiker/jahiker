@@ -37,6 +37,10 @@
   --color-dark-op-300: rgba(0, 0, 0, 0.3);
 }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 *,
 *::after,
 *::before {
@@ -45,9 +49,11 @@
   box-sizing: border-box;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+html,
+body {
+  font-family: "Monument Extended", "Trebuchet MS", "Lucida Sans Unicode",
+    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
 
 .glass-element {
   background-color: rgba(0, 0, 0, 0.2);
@@ -90,8 +96,14 @@
   background-size: cover;
 }
 
-html,
-body {
-  font-family: "Monument Extended", "Trebuchet MS", "Lucida Sans Unicode",
-    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+.dateTimaline {
+  color: var(--color-primary);
+  padding: 13px 20px !important;
+  text-align: center !important;
+}
+
+@media screen and (max-width: 768px) {
+  .dateTimaline {
+    font-size: 10px !important;
+  }
 }

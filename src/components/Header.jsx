@@ -2,8 +2,29 @@ import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { Logo } from './Logo'
 import { HiMenu, HiX } from 'react-icons/hi'
+import { motion } from 'framer-motion'
 
 import { mainMenu } from '../locales/en'
+
+const mobileMenu = {
+  open: {
+    scale: 1,
+    opacity: 1,
+    borderRadius: '10px',
+    transformOrigin: 'top right',
+    transition: {
+      duration: 0.3
+    }
+  },
+  closed: {
+    scale: 0,
+    opacity: 0,
+    borderRadius: '50%',
+    transition: {
+      duration: 0.3
+    }
+  }
+}
 
 export const Header = () => {
   const [openMenu, setOpenMenu] = useState(false)
@@ -16,11 +37,16 @@ export const Header = () => {
           <h2 className='text-[16px] w-[115px] text-left'>Web Developer</h2>
         </div>
       </NavLink>
-      <nav className={`mobile-menu md:flex justify-end gap-4 ${openMenu ? 'flex flex-col absolute top-[100%] right-10 p-5 md:p-3 rounded-lg shadow-md' : 'hidden'}`}>
+      <motion.nav
+        initial={false}
+        variants={mobileMenu}
+        animate={openMenu ? 'open' : 'closed'}
+        className={`mobile-menu md:flex justify-end gap-4 ${openMenu ? 'flex flex-col absolute top-[100%] right-10 p-5 md:p-3 rounded-lg shadow-md' : 'hidden'}`}
+      >
         {mainMenu && (
           mainMenu.map((item, index) => (<NavLink key={`item-menu-${index}`} to={item.to} className='text-[16px] md:text-[12px] font-extralight hover:text-primary hover:bg-black'>{item.label}</NavLink>))
         )}
-      </nav>
+      </motion.nav>
       <button className='inline-block md:hidden cursor-pointer' onClick={() => setOpenMenu(!openMenu)}>
         {openMenu ? <HiX size='30px' /> : <HiMenu size='30px' />}
       </button>

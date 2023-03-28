@@ -2,9 +2,9 @@ import { FaHtml5, FaCss3Alt, FaJsSquare, FaPhp, FaReact, FaVuejs, FaLaravel, FaS
 import { VscTerminalPowershell } from 'react-icons/vsc'
 import { DiMysql, DiJqueryLogo, DiStylus, DiMaterializecss } from 'react-icons/di'
 
-const Technologies = () => {
+const Technologies = ({ motion }) => {
   return (
-    <div className='glass-element rounded-[40px] z-10 p-5 md:p-10 overflow-hidden flex justify-center items-center flex-wrap gap-10 md:gap-20'>
+    <motion.div initial={{ opacity: 0, y: '100%' }} animate={{ opacity: 1, y: 0 }} transition={{ ease: 'linear', duration: 1 }} className='glass-element rounded-[40px] z-10 p-5 md:p-10 overflow-hidden flex justify-center items-center flex-wrap gap-10 md:gap-20'>
       <div className='flex flex-col justify-center items-center gap-2 bg-dark text-primary w-[100px] h-[100px] rounded-full'>
         <FaHtml5 size='40px' />
         <span className='uppercase text-[8px] font-extralight'>Html</span>
@@ -100,7 +100,7 @@ const Technologies = () => {
         <span className='uppercase text-[8px] font-extralight'>linux</span>
       </div>
 
-    </div>
+    </motion.div>
   )
 }
 
