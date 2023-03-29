@@ -12,7 +12,12 @@ export const NotFound = () => {
       <Logo />
       <p>Page not found</p>
       <p>{error.statusText || error.message}</p>
-      <Link to='/' className='px-5 py-3 bg-dark-mid hover:bg-light hover:border-dark text-primary'>Go Back</Link>
+      <Link
+        to='/'
+        className='px-5 py-3 bg-dark-mid hover:bg-light hover:border-dark text-primary'
+      >
+        Go Back
+      </Link>
     </div>
   )
 }

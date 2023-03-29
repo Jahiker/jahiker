@@ -1,10 +1,8 @@
 import { motion } from 'framer-motion'
-import { TbBrandGithub, TbBrandLinkedin, TbUserCircle } from 'react-icons/tb'
 
 import { personalData, socialNetworks } from '../locales/en'
 import avatar from '../assets/images/avatar.jpeg'
 import { Logo } from './Logo'
-import resume from '../assets/docs/Jahiker-Rojas-CV.pdf'
 
 const Hero = () => {
   return (
@@ -19,7 +17,8 @@ const Hero = () => {
           }}
           viewport={{ once: true }}
           className='uppercase text-[40px] leading-[40px] sm:text-[60px] sm:leading-[60px] md:text-[90px] md:leading-[90px] font-bold'
-        >{personalData.name}
+        >
+          {personalData.name}
         </motion.h1>
         <motion.p
           initial={{ x: '100%', opacity: 0 }}
@@ -30,7 +29,8 @@ const Hero = () => {
           }}
           viewport={{ once: true }}
           className='uppercase text-[30px] leading-[40px] sm:text-[60px] sm:leading-[60px] md:text-[85px] md:leading-[70px] font-bold'
-        >{'</>'}
+        >
+          {'</>'}
         </motion.p>
       </div>
       <div className='flex justify-center'>
@@ -45,7 +45,11 @@ const Hero = () => {
           viewport={{ once: true }}
           className='p-2 my-5 bg-dark-op-300 flex gap-3 relative before:bg-pill before:w-full before:h-full before:absolute before:inset-0 before:z-0 before:grayscale before:contrast-200 rounded-[40px] overflow-hidden'
         >
-          <img src={avatar} alt={personalData.name} className='w-[50px] h-[50px] rounded-full z-10' />
+          <img
+            src={avatar}
+            alt={personalData.name}
+            className='w-[50px] h-[50px] rounded-full z-10'
+          />
         </motion.div>
       </div>
       <hr className='hr' />
@@ -59,7 +63,8 @@ const Hero = () => {
           }}
           viewport={{ once: true }}
           className='mb-5'
-        >{personalData.description}
+        >
+          {personalData.description}
         </motion.p>
         <div className='flex justify-center my-5'>
           <Logo size='30px' rotation />
@@ -74,18 +79,18 @@ const Hero = () => {
           viewport={{ once: true }}
           className='flex justify-start flex-wrap items-center gap-4 glass-element p-4 mad:p-3 rounded-[40px] overflow-hidden'
         >
-          <a href={socialNetworks.github} className='flex justify-center items-center gap-3 border-2 border-dark-mid border-solid px-5 py-1 rounded-[20px] bg-dark text-primary hover:bg-primary hover:text-dark w-full md:w-auto'>
-            <TbBrandGithub size='16px' />
-            <span className='text-[16px]'>Github</span>
-          </a>
-          <a href={socialNetworks.linkedin} className='flex justify-center items-center gap-3 border-2 border-dark-mid border-solid px-5 py-1 rounded-[20px] bg-dark text-primary hover:bg-primary hover:text-dark w-full md:w-auto'>
-            <TbBrandLinkedin size='16px' />
-            <span className='text-[16px]'>Linkedin</span>
-          </a>
-          <a href={resume} download className='flex justify-center items-center gap-3 border-2 border-dark-mid border-solid px-5 py-1 rounded-[20px] bg-dark text-primary hover:bg-primary hover:text-dark w-full md:w-auto' target='_blank' rel='noopener noreferrer'>
-            <TbUserCircle size='16px' />
-            <span className='text-[16px]'>Resume</span>
-          </a>
+          {socialNetworks?.map((item, index) => (
+            <a
+              key={index}
+              href={item.url}
+              className='flex justify-center items-center gap-3 border-2 border-dark-mid border-solid px-5 py-1 rounded-[20px] bg-dark text-primary hover:bg-primary hover:text-dark w-full md:w-auto'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <item.icon size='16px' />
+              <span className='text-[16px]'>{item.title}</span>
+            </a>
+          ))}
           <hr className='hr hidden md:w-[50%] sm:flex' />
         </motion.div>
       </div>

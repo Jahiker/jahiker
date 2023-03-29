@@ -1,5 +1,7 @@
 import freelance from '../assets/images/freelancer.webp'
 import smk from '../assets/images/smk.png'
+import { TbBrandGithub, TbBrandLinkedin, TbDownload } from 'react-icons/tb'
+import resume from '../assets/docs/Jahiker-Rojas-CV.pdf'
 
 export const mainMenu = [
   {
@@ -34,14 +36,29 @@ export const personalData = {
   email: 'rojasjahiker@gmail.com',
   description: `I'm a web developer, with ${
     date.getFullYear() - 2020
-  } years of experience developing web interfaces and apps. Tech passionate and I love to learn new stuff. Scroll down and know more about me.`
+  } years of experience developing Frontend and Backend web apps. Tech passionate and I love to learn new stuff. Scroll down and know more about me.`
 }
 
-export const socialNetworks = {
-  linkedin:
-    'https://www.linkedin.com/in/jahiker-robert-rojas-zuniga-726b20121/',
-  github: 'https://github.com/Jahiker'
-}
+export const socialNetworks = [
+  {
+    title: 'Linkedin',
+    url: 'https://www.linkedin.com/in/jahiker-robert-rojas-zuniga-726b20121/',
+    icon: TbBrandLinkedin,
+    download: false
+  },
+  {
+    title: 'Github',
+    url: 'https://github.com/Jahiker',
+    icon: TbBrandGithub,
+    download: false
+  },
+  {
+    title: 'Resume',
+    url: resume,
+    icon: TbDownload,
+    download: true
+  }
+]
 
 export const experience = [
   {
@@ -54,8 +71,7 @@ export const experience = [
       'Developing and maintaining custom wordpress themes.',
       'Developing and maintaining Laravel and PHP fullstack apps.',
       'Developing and maintaining Vue - Vuetify Frontend apps.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.'
+      'Implementing responsive design and ensuring cross-browser compatibility.'
     ]
   },
   {

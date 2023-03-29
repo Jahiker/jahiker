@@ -15,7 +15,11 @@ const Contact = lazy(() => import('../pages/Contact'))
 export const router = createHashRouter([
   {
     path: '/',
-    element: <Suspense fallback={<Loader />}><Root /></Suspense>,
+    element: (
+      <Suspense fallback={<Loader />}>
+        <Root />
+      </Suspense>
+    ),
     errorElement: <NotFound />,
     children: [
       {
