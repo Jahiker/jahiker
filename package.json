@@ -1,5 +1,5 @@
 {
-  "homepage":"https://jahiker.github.io/jahiker",
+  "homepage": "https://jahiker.github.io/jahiker",
   "name": "jahiker",
   "private": true,
   "version": "0.0.0",
@@ -13,9 +13,11 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "framer-motion": "^10.9.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.43.8",
     "react-icons": "^4.8.0",
     "react-router-dom": "^6.9.0",
     "react-vertical-timeline-component": "^3.6.0"

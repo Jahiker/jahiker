@@ -39,7 +39,7 @@ export const Header = () => {
       </NavLink>
       <nav className='hidden md:flex justify-end gap-4'>
         {mainMenu && (
-          mainMenu.map((item, index) => (<NavLink key={`item-menu-${index}`} to={item.to} className='text-[16px] md:text-[12px] font-extralight hover:text-primary hover:bg-black'>{item.label}</NavLink>))
+          mainMenu.map((item, index) => (<NavLink key={`item-menu-${index}`} to={item.to} className='text-[16px] md:text-[12px] hover:text-primary hover:bg-black'>{item.label}</NavLink>))
         )}
       </nav>
 
@@ -50,7 +50,7 @@ export const Header = () => {
         className={`mobile-menu justify-end gap-4 ${openMenu ? 'flex flex-col absolute top-[100%] right-10 p-5 md:p-3 rounded-lg shadow-md' : 'hidden'}`}
       >
         {mainMenu && (
-          mainMenu.map((item, index) => (<NavLink key={`item-menu-${index}`} to={item.to} className='text-[16px] md:text-[12px] font-extralight hover:text-primary hover:bg-black'>{item.label}</NavLink>))
+          mainMenu.map((item, index) => (<NavLink key={`item-menu-${index}`} to={item.to} className='text-[16px] md:text-[12px] text-white hover:text-primary hover:bg-black'>{item.label}</NavLink>))
         )}
       </motion.nav>
       <button className='inline-block md:hidden cursor-pointer' onClick={() => setOpenMenu(!openMenu)}>

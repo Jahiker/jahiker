@@ -32,11 +32,14 @@ export const personalData = {
   city: 'Valencia',
   telf: '+584244245378',
   email: 'rojasjahiker@gmail.com',
-  description: `I'm a web developer, with ${date.getFullYear() - 2020} years of experience developing web interfaces and apps. Tech passionate and I love to learn new stuff. Scroll down and know more about me.`
+  description: `I'm a web developer, with ${
+    date.getFullYear() - 2020
+  } years of experience developing web interfaces and apps. Tech passionate and I love to learn new stuff. Scroll down and know more about me.`
 }
 
 export const socialNetworks = {
-  linkedin: 'https://www.linkedin.com/in/jahiker-robert-rojas-zuniga-726b20121/',
+  linkedin:
+    'https://www.linkedin.com/in/jahiker-robert-rojas-zuniga-726b20121/',
   github: 'https://github.com/Jahiker'
 }
 
@@ -74,3 +77,33 @@ export const experience = [
     ]
   }
 ]
+
+export const contactForm = {
+  title: 'Contact Me',
+  name: {
+    label: 'Name',
+    errors: {
+      required: 'Name is required'
+    }
+  },
+  email: {
+    label: 'Email',
+    errors: {
+      required: 'Email is required',
+      pattern: 'Invalid email'
+    }
+  },
+  messageText: {
+    label: 'Message',
+    errors: {
+      required: 'Message is required'
+    }
+  },
+  submit: {
+    label: 'Send',
+    sending: 'Sending...'
+  },
+  success: {
+    message: 'Message successfully sent!'
+  }
+}
