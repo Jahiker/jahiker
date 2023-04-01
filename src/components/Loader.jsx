@@ -5,7 +5,7 @@ export const Loader = () => {
   return (
     <div className='w-full min-h-screen fixed inset-0 flex flex-col justify-center items-center bg-transparent'>
       <Logo rotation />
-      <h2>Loading...</h2>
+      <h2 className='my-5'>Loading...</h2>
     </div>
   )
 }
