@@ -42,18 +42,18 @@ const Projects = () => {
     console.log('profesionalProjects', profesionalProjects)
   }, [])
   return (
-    <div className='block bg-dark-mid rounded-xl p-10'>
-      <div className='flex justify-between items-start mb-10'>
-        <h1 className='uppercase text-light text-[40px] font-bold'>
+    <div className='block bg-dark-mid rounded-xl p-5 sm:p-10'>
+      <div className='flex justify-between items-start flex-col md:flex-row mb-10'>
+        <h1 className='uppercase text-light text-[25px] sm:text-[40px] font-bold'>
           {projectsData.title}{' '}
           <span className='text-primary text-[60px] leading-3'>.</span>
         </h1>
-        <p className='text-left max-w-[50%] font-extralight text-light-mid'>
+        <p className='text-left max-w-full sm:max-w-[50%] font-extralight text-light-mid text-[12px] md:text-[14px]'>
           {projectsData.description}
         </p>
       </div>
       <motion.div
-        className='grid grid-cols-3 gap-3'
+        className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3'
         variants={container}
         initial='hidden'
         animate='visible'
@@ -69,7 +69,7 @@ const Projects = () => {
                 </div>
                 <div className='absolute inset-0 p-3 hover-info glass-element'>
                   <p className='text-light-mid mb-5'>{project.description}</p>
-                  <a href={project.site_link} className='text-light-mid hover:text-primary flex justify-center items-center border-2 w-[30px] h-[30px] rounded-full'><FiGlobe /></a>
+                  <a href={project.site_link} className='text-light-mid hover:text-primary flex justify-center items-center border-2 w-[30px] h-[30px] rounded-full' target='_blank' rel='noopener noreferrer'><FiGlobe /></a>
                 </div>
               </div>
             </Tilt>

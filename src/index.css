@@ -128,6 +128,6 @@ body {
   transform: translateY(0);
 }
 
-.project-card:hover .hover-info.glass-element {
+.project-card .hover-info.glass-element {
   border: none;
 }
