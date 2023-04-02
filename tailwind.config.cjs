@@ -10,6 +10,7 @@ module.exports = {
         'dark-mid': '#171717',
         gray: '#292929',
         light: '#c4c4c4',
+        'light-mid': '#727272',
         'dark-op-300': 'rgba(0,0,0,0.3)'
       },
       backgroundImage: {

@@ -26,6 +26,7 @@ import {
 import { VscTerminalPowershell } from 'react-icons/vsc'
 import { Typescript } from '../components/Icons/Typescript'
 import { TailwindCss } from '../components/Icons/TailwindCss'
+import { WebComponents } from '../components/Icons/WebComponents'
 import resume from '../assets/docs/Jahiker-Rojas-CV.pdf'
 
 export const mainMenu = [
@@ -72,11 +73,13 @@ export const skillsList = [
   { name: 'Typescript', icon: Typescript },
   { name: 'React', icon: FaReact },
   { name: 'Vue', icon: FaVuejs },
+  { name: 'Web Components', icon: WebComponents },
   { name: 'JQuery', icon: DiJqueryLogo },
   { name: 'Laravel', icon: FaLaravel },
   { name: 'Shopify', icon: FaShopify },
   { name: 'Wordpress', icon: FaWordpressSimple },
   { name: 'Sass', icon: FaSass },
+  { name: 'Less', icon: FaLess },
   { name: 'Stylus', icon: DiStylus },
   { name: 'Tailwind', icon: TailwindCss },
   { name: 'Bootstrap', icon: FaBootstrap },
@@ -110,19 +113,6 @@ export const socialNetworks = [
 
 export const experience = [
   {
-    title: 'Fullstack Web Developer',
-    company_name: 'Freelance',
-    icon: freelance,
-    iconBg: '#FFFFFF',
-    date: 'Jan 2020 - Oct 2020',
-    points: [
-      'Developing and maintaining custom wordpress themes.',
-      'Developing and maintaining Laravel and PHP fullstack apps.',
-      'Developing and maintaining Vue - Vuetify Frontend apps.',
-      'Implementing responsive design and ensuring cross-browser compatibility.'
-    ]
-  },
-  {
     title: 'Frontend Web Developer',
     company_name: 'Smk Online',
     icon: smk,
@@ -138,6 +128,19 @@ export const experience = [
       'Improve Frontend apps load and performance.',
       'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
       'Participating in code reviews and providing constructive feedback to other developers.'
+    ]
+  },
+  {
+    title: 'Fullstack Web Developer',
+    company_name: 'Freelance',
+    icon: freelance,
+    iconBg: '#FFFFFF',
+    date: 'Jan 2020 - Oct 2020',
+    points: [
+      'Developing and maintaining custom wordpress themes.',
+      'Developing and maintaining Laravel and PHP fullstack apps.',
+      'Developing and maintaining Vue - Vuetify Frontend apps.',
+      'Implementing responsive design and ensuring cross-browser compatibility.'
     ]
   }
 ]
@@ -172,7 +175,21 @@ export const contactForm = {
   }
 }
 
-export const projectsList = [
+export const projectsData = {
+  title: 'My Projects',
+  description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, tempora?'
+}
+
+export const profesionalProjects = [
+  {
+    name: 'Professional Portfolio',
+    description: 'Static web portfolio.',
+    tags: ['react', 'tailwind', 'css'],
+    image: '',
+    source_code_link: null,
+    site_link: 'https://jahiker.github.io/jahiker/',
+    year: 2023
+  },
   {
     name: 'TCC',
     description:
@@ -180,15 +197,82 @@ export const projectsList = [
     tags: ['react', 'wordpress', 'sass'],
     image: '',
     source_code_link: null,
-    site_link: 'https://tcc-new.smk.agency/'
+    site_link: 'https://tcc-new.smk.agency/',
+    year: 2023
   },
   {
     name: 'Falkon by TCC',
     description:
-      'Web-based platform that allows users to search, register or calculate the price of packages shippings.',
-    tags: ['react', 'wordpress', 'sass'],
+      'Corporate website, for user information and contact form that let you send claims.',
+    tags: ['wordpress', 'javascript', 'sass'],
     image: '',
     source_code_link: null,
-    site_link: 'https://falkon.com.co/'
+    site_link: 'https://falkon.com.co/',
+    year: 2022
+  },
+  {
+    name: 'Falkon Tutorials',
+    description: 'Landing for video tutorials with filter and sort system',
+    tags: ['wordpress', 'vue', 'sass'],
+    image: '',
+    source_code_link: null,
+    site_link: 'https://dev.smk.agency/falkon/tutoriales/',
+    year: 2023
+  },
+  {
+    name: 'Celsia',
+    description:
+      'Corporate website, for user information and contact form that let you send claims.',
+    tags: ['wordpress', 'javascript', 'jquery', 'sass', 'bootstrap'],
+    image: '',
+    source_code_link: null,
+    site_link: 'https://falkon.com.co/',
+    year: 2020
+  },
+  {
+    name: 'Jacky Milan',
+    description: 'E-commerce for household linen.',
+    tags: ['shopify', 'liquid', 'javascript', 'web components', 'css'],
+    image: '',
+    source_code_link: null,
+    site_link: 'https://falkon.com.co/',
+    year: 2022
+  },
+  {
+    name: 'South Sun',
+    description: 'Corporate website, for real-estate investments in Colombia.',
+    tags: ['wordpress', 'javascript', 'jquery', 'sass'],
+    image: '',
+    source_code_link: null,
+    site_link: 'https://falkon.com.co/',
+    year: 2021
+  },
+  {
+    name: 'Glokal Store',
+    description: 'E-commerce of clothes for the whole family.',
+    tags: ['shopify', 'liquid', 'javascript', 'web components', 'css'],
+    image: '',
+    source_code_link: null,
+    site_link: 'https://glokalstore.com/',
+    year: 2022
+  },
+  {
+    name: 'Touche International',
+    description:
+      'franchise template refactor, from JQuery to modern Javascript.',
+    tags: ['shopify', 'liquid', 'javascript', 'web components', 'css'],
+    image: '',
+    source_code_link: null,
+    site_link: 'https://touche.co/pages/Franchises',
+    year: 2023
+  },
+  {
+    name: 'ADH Store',
+    description: 'E-commerce for adhesive materials.',
+    tags: ['shopify', 'liquid', 'javascript', 'web components', 'css'],
+    image: '',
+    source_code_link: null,
+    site_link: 'https://glokalstore.com/',
+    year: 2021
   }
 ]
