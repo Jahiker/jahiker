@@ -28,6 +28,17 @@ import { Typescript } from '../components/Icons/Typescript'
 import { TailwindCss } from '../components/Icons/TailwindCss'
 import { WebComponents } from '../components/Icons/WebComponents'
 import resume from '../assets/docs/Jahiker-Rojas-CV.pdf'
+import jahikerScreen from '../assets/screenshots/jahiker.png'
+import adhScreen from '../assets/screenshots/adh.png'
+import celsiaScreen from '../assets/screenshots/celsia.png'
+import falkonTutorialsScreen from '../assets/screenshots/falkon-tutoriales.png'
+import falkonScreen from '../assets/screenshots/falkon.png'
+import glokalScreen from '../assets/screenshots/glokalstore.png'
+import jackyScreen from '../assets/screenshots/jackymilan.png'
+import mysouthsunScreen from '../assets/screenshots/mysouthsun.png'
+import protectoScreen from '../assets/screenshots/protecto.png'
+import tccScreen from '../assets/screenshots/tcc.png'
+import toucheScreen from '../assets/screenshots/touche.png'
 
 export const mainMenu = [
   {
@@ -177,7 +188,8 @@ export const contactForm = {
 
 export const projectsData = {
   title: 'My Projects',
-  description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, tempora?'
+  description:
+    'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, tempora?'
 }
 
 export const profesionalProjects = [
@@ -185,8 +197,8 @@ export const profesionalProjects = [
     name: 'Professional Portfolio',
     description: 'Static web portfolio.',
     tags: ['react', 'tailwind', 'css'],
-    image: '',
-    source_code_link: null,
+    image: jahikerScreen,
+    source_code_link: 'https://github.com/Jahiker/jahiker',
     site_link: 'https://jahiker.github.io/jahiker/',
     year: 2023
   },
@@ -194,8 +206,8 @@ export const profesionalProjects = [
     name: 'TCC',
     description:
       'Web-based platform that allows users to search, register or calculate the price of packages shippings.',
-    tags: ['react', 'wordpress', 'sass'],
-    image: '',
+    tags: ['react', 'wordpress', 'php', 'sass'],
+    image: tccScreen,
     source_code_link: null,
     site_link: 'https://tcc-new.smk.agency/',
     year: 2023
@@ -204,8 +216,8 @@ export const profesionalProjects = [
     name: 'Falkon by TCC',
     description:
       'Corporate website, for user information and contact form that let you send claims.',
-    tags: ['wordpress', 'javascript', 'sass'],
-    image: '',
+    tags: ['wordpress', 'php', 'javascript', 'sass'],
+    image: falkonScreen,
     source_code_link: null,
     site_link: 'https://falkon.com.co/',
     year: 2022
@@ -213,8 +225,8 @@ export const profesionalProjects = [
   {
     name: 'Falkon Tutorials',
     description: 'Landing for video tutorials with filter and sort system',
-    tags: ['wordpress', 'vue', 'sass'],
-    image: '',
+    tags: ['wordpress', 'php', 'vue', 'sass'],
+    image: falkonTutorialsScreen,
     source_code_link: null,
     site_link: 'https://dev.smk.agency/falkon/tutoriales/',
     year: 2023
@@ -223,35 +235,35 @@ export const profesionalProjects = [
     name: 'Celsia',
     description:
       'Corporate website, for user information and contact form that let you send claims.',
-    tags: ['wordpress', 'javascript', 'jquery', 'sass', 'bootstrap'],
-    image: '',
+    tags: ['wordpress', 'php', 'javascript', 'jquery', 'sass', 'bootstrap'],
+    image: celsiaScreen,
     source_code_link: null,
-    site_link: 'https://falkon.com.co/',
+    site_link: 'https://www.celsia.com/',
     year: 2020
   },
   {
     name: 'Jacky Milan',
     description: 'E-commerce for household linen.',
-    tags: ['shopify', 'liquid', 'javascript', 'web components', 'css'],
-    image: '',
+    tags: ['shopify', 'javascript', 'web components', 'css'],
+    image: jackyScreen,
     source_code_link: null,
-    site_link: 'https://falkon.com.co/',
+    site_link: 'https://jackymilan.com/',
     year: 2022
   },
   {
     name: 'South Sun',
     description: 'Corporate website, for real-estate investments in Colombia.',
-    tags: ['wordpress', 'javascript', 'jquery', 'sass'],
-    image: '',
+    tags: ['wordpress', 'php', 'javascript', 'jquery', 'sass'],
+    image: mysouthsunScreen,
     source_code_link: null,
-    site_link: 'https://falkon.com.co/',
+    site_link: 'https://mysouthsun.com/',
     year: 2021
   },
   {
     name: 'Glokal Store',
     description: 'E-commerce of clothes for the whole family.',
-    tags: ['shopify', 'liquid', 'javascript', 'web components', 'css'],
-    image: '',
+    tags: ['shopify', 'javascript', 'web components', 'css'],
+    image: glokalScreen,
     source_code_link: null,
     site_link: 'https://glokalstore.com/',
     year: 2022
@@ -260,8 +272,8 @@ export const profesionalProjects = [
     name: 'Touche International',
     description:
       'franchise template refactor, from JQuery to modern Javascript.',
-    tags: ['shopify', 'liquid', 'javascript', 'web components', 'css'],
-    image: '',
+    tags: ['shopify', 'javascript', 'web components', 'css'],
+    image: toucheScreen,
     source_code_link: null,
     site_link: 'https://touche.co/pages/Franchises',
     year: 2023
@@ -269,10 +281,19 @@ export const profesionalProjects = [
   {
     name: 'ADH Store',
     description: 'E-commerce for adhesive materials.',
-    tags: ['shopify', 'liquid', 'javascript', 'web components', 'css'],
-    image: '',
+    tags: ['shopify', 'javascript', 'web components', 'css'],
+    image: adhScreen,
     source_code_link: null,
-    site_link: 'https://glokalstore.com/',
+    site_link: 'https://www.adh.com.co/',
+    year: 2021
+  },
+  {
+    name: 'Protecto pinturas',
+    description: 'Corporate web site for paint and coating company.',
+    tags: ['wordpress', 'php', 'jquery', 'css'],
+    image: protectoScreen,
+    source_code_link: null,
+    site_link: 'https://protectopinturas.com/',
     year: 2021
   }
 ]

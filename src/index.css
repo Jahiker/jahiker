@@ -70,6 +70,13 @@ body {
   background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
 
+.hr02 {
+  border: 0;
+  height: 1px;
+  background: #525252;
+  background-image: linear-gradient(to right, var(--color-light), var(--color-primary), var(--color-light));
+}
+
 @media screen and (max-width: 768px) {
   .mobile-menu {
     background-color: rgba(0, 0, 0, 0.3);
@@ -115,6 +122,15 @@ body {
   transition: opacity 0.3s;
 }
 
+.project-card .normal-info::before {
+  content: '';
+  display: block;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
 .project-card:hover .normal-info {
   opacity: 0;
 }
@@ -130,4 +146,5 @@ body {
 
 .project-card .hover-info.glass-element {
   border: none;
+  background-color: rgba(0, 0, 0, 0.6);
 }
