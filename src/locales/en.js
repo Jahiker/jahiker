@@ -27,6 +27,7 @@ import { VscTerminalPowershell } from 'react-icons/vsc'
 import { Typescript } from '../components/Icons/Typescript'
 import { TailwindCss } from '../components/Icons/TailwindCss'
 import { WebComponents } from '../components/Icons/WebComponents'
+import { Webpack } from '../components/Icons/Webpack'
 import resume from '../assets/docs/Jahiker-Rojas-CV.pdf'
 import jahikerScreen from '../assets/screenshots/jahiker.png'
 import adhScreen from '../assets/screenshots/adh.png'
@@ -39,6 +40,13 @@ import mysouthsunScreen from '../assets/screenshots/mysouthsun.png'
 import protectoScreen from '../assets/screenshots/protecto.png'
 import tccScreen from '../assets/screenshots/tcc.png'
 import toucheScreen from '../assets/screenshots/touche.png'
+import cashFlowScreen from '../assets/screenshots/cashflow.png'
+import editorVueScreen from '../assets/screenshots/editor-vue.png'
+import flyBookingScreen from '../assets/screenshots/fly-booking.png'
+import petgramScreen from '../assets/screenshots/petgram.png'
+import platziConfMerchScreen from '../assets/screenshots/platzi-conf-merch.png'
+import todoReactScreen from '../assets/screenshots/todo-react.png'
+import weatherReactScreen from '../assets/screenshots/weather-react.png'
 
 export const mainMenu = [
   {
@@ -95,6 +103,7 @@ export const skillsList = [
   { name: 'Tailwind', icon: TailwindCss },
   { name: 'Bootstrap', icon: FaBootstrap },
   { name: 'Materialize', icon: DiMaterializecss },
+  { name: 'Webpack', icon: Webpack },
   { name: 'MySql', icon: DiMysql },
   { name: 'Terminal', icon: VscTerminalPowershell },
   { name: 'Windows', icon: FaWindows },
@@ -189,7 +198,7 @@ export const contactForm = {
 export const projectsData = {
   title: 'My Projects',
   description:
-    'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, tempora?'
+    "These are some of the project that i've worked on, check them out and know more about my professional background."
 }
 
 export const profesionalProjects = [
@@ -235,7 +244,15 @@ export const profesionalProjects = [
     name: 'Celsia',
     description:
       'Corporate website, for user information and contact form that let you send claims.',
-    tags: ['wordpress', 'php', 'javascript', 'jquery', 'sass', 'bootstrap'],
+    tags: [
+      'wordpress',
+      'php',
+      'javascript',
+      'jquery',
+      'sass',
+      'bootstrap',
+      'webpack'
+    ],
     image: celsiaScreen,
     source_code_link: null,
     site_link: 'https://www.celsia.com/',
@@ -295,5 +312,68 @@ export const profesionalProjects = [
     source_code_link: null,
     site_link: 'https://protectopinturas.com/',
     year: 2021
+  },
+  {
+    name: 'Platzi Conf Merch',
+    description: 'E-commerce project for React and Webpack course.',
+    tags: ['react', 'sass', 'webpack'],
+    image: platziConfMerchScreen,
+    source_code_link: 'https://github.com/Jahiker/platzi-conf-merch',
+    site_link: 'https://platzi-conf-merge-89c4a.web.app/',
+    year: 2022
+  },
+  {
+    name: 'To do App',
+    description: 'To do app made with React for basic course.',
+    tags: ['react', 'css'],
+    image: todoReactScreen,
+    source_code_link: 'https://github.com/Jahiker/react-intro-platzi',
+    site_link: 'https://jahiker.github.io/react-intro-platzi/',
+    year: 2022
+  },
+  {
+    name: 'Cashflow App',
+    description: 'Cash flow app for Vue 3 Course',
+    tags: ['vue', 'css'],
+    image: cashFlowScreen,
+    source_code_link: 'https://github.com/Jahiker/curso-practico-vue-platzi',
+    site_link: 'https://inspiring-croissant-77b3ab.netlify.app/',
+    year: 2022
+  },
+  {
+    name: 'Vue Image Editor',
+    description: 'Image editor app made with Vue Js',
+    tags: ['vue', 'tailwind'],
+    image: editorVueScreen,
+    source_code_link: 'https://github.com/Jahiker/vue-image-editor',
+    site_link: 'https://jahiker.github.io/vue-image-editor/',
+    year: 2022
+  },
+  {
+    name: 'React Fly Booking',
+    description: 'Fly booking app made with React State Machine',
+    tags: ['react', 'css'],
+    image: flyBookingScreen,
+    source_code_link: 'https://github.com/Jahiker/platzi-state-machines',
+    site_link: 'https://jahiker.github.io/platzi-state-machines/',
+    year: 2022
+  },
+  {
+    name: 'Petgram',
+    description: 'Instagram clone for pets made with React',
+    tags: ['react', 'webpack', 'css'],
+    image: petgramScreen,
+    source_code_link: 'https://github.com/Jahiker/petgram',
+    site_link: 'https://petgram-omega-seven.vercel.app/',
+    year: 2022
+  },
+  {
+    name: 'Weather Location App',
+    description: 'Weather location app made with React',
+    tags: ['react', 'webpack', 'css'],
+    image: weatherReactScreen,
+    source_code_link: 'https://github.com/Jahiker/weather-location-app',
+    site_link: 'https://jahiker.github.io/weather-location-app/',
+    year: 2022
   }
 ]
