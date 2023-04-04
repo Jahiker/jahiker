@@ -1,6 +1,5 @@
 import freelance from '../assets/images/freelancer.webp'
 import smk from '../assets/images/smk.png'
-import { TbBrandGithub, TbBrandLinkedin, TbDownload } from 'react-icons/tb'
 import {
   FaHtml5,
   FaCss3Alt,
@@ -28,7 +27,6 @@ import { Typescript } from '../components/Icons/Typescript'
 import { TailwindCss } from '../components/Icons/TailwindCss'
 import { WebComponents } from '../components/Icons/WebComponents'
 import { Webpack } from '../components/Icons/Webpack'
-import resume from '../assets/docs/Jahiker-Rojas-CV.pdf'
 import jahikerScreen from '../assets/screenshots/jahiker.png'
 import adhScreen from '../assets/screenshots/adh.png'
 import celsiaScreen from '../assets/screenshots/celsia.png'
@@ -47,42 +45,6 @@ import petgramScreen from '../assets/screenshots/petgram.png'
 import platziConfMerchScreen from '../assets/screenshots/platzi-conf-merch.png'
 import todoReactScreen from '../assets/screenshots/todo-react.png'
 import weatherReactScreen from '../assets/screenshots/weather-react.png'
-
-export const mainMenu = [
-  {
-    label: 'Home',
-    to: '/'
-  },
-  {
-    label: 'Skills',
-    to: '/skills'
-  },
-  {
-    label: 'Experience',
-    to: '/experience'
-  },
-  {
-    label: 'Projects',
-    to: '/projects'
-  },
-  {
-    label: 'Contact',
-    to: '/contact'
-  }
-]
-
-const date = new Date()
-
-export const personalData = {
-  name: 'Jahiker Rojas',
-  country: 'Venezuela',
-  city: 'Valencia',
-  telf: '+584244245378',
-  email: 'rojasjahiker@gmail.com',
-  description: `I'm a web developer, with ${
-    date.getFullYear() - 2020
-  } years of experience developing Frontend and Backend web apps. Tech passionate and I love to learn new stuff. Check this site out and know more about me.`
-}
 
 export const skillsList = [
   { name: 'Html', icon: FaHtml5 },
@@ -108,27 +70,6 @@ export const skillsList = [
   { name: 'Terminal', icon: VscTerminalPowershell },
   { name: 'Windows', icon: FaWindows },
   { name: 'Linux', icon: FaLinux }
-]
-
-export const socialNetworks = [
-  {
-    title: 'Linkedin',
-    url: 'https://www.linkedin.com/in/jahiker-robert-rojas-zuniga-726b20121/',
-    icon: TbBrandLinkedin,
-    download: false
-  },
-  {
-    title: 'Github',
-    url: 'https://github.com/Jahiker',
-    icon: TbBrandGithub,
-    download: false
-  },
-  {
-    title: 'Resume',
-    url: resume,
-    icon: TbDownload,
-    download: true
-  }
 ]
 
 export const experience = [

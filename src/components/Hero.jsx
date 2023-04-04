@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 
-import { personalData, socialNetworks } from '../locales/en'
+import { personalData, socialNetworks } from '../locales/en/home.en'
 import avatar from '../assets/images/avatar.jpeg'
 import { Logo } from './Logo'
 

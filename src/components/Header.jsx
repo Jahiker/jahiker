@@ -4,7 +4,7 @@ import { Logo } from './Logo'
 import { HiMenu, HiX } from 'react-icons/hi'
 import { motion } from 'framer-motion'
 
-import { mainMenu } from '../locales/en'
+import { mainMenu } from '../locales/en/app.en'
 
 const mobileMenu = {
   open: {
