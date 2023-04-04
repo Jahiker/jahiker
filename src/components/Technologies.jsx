@@ -1,4 +1,4 @@
-import { skillsList } from '../locales/en'
+import { skillsList } from '../locales/en/skills.en.js'
 
 const Technologies = ({ motion }) => {
   return (

@@ -3,7 +3,7 @@ import {
   VerticalTimelineElement
 } from 'react-vertical-timeline-component'
 import { motion } from 'framer-motion'
-import { experience } from '../locales/en'
+import { experience } from '../locales/en/experience.en'
 import 'react-vertical-timeline-component/style.min.css'
 
 const Experience = () => {

@@ -1,4 +1,5 @@
-import { skillsList, profesionalProjects } from '../locales/en'
+import { skillsList } from '../locales/en/skills.en'
+import { profesionalProjects } from '../locales/en/projects.en'
 
 export const useFilters = () => {
   const filtersList = skillsList.map((skill) => {

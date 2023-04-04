@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { profesionalProjects, projectsData } from '../locales/en'
+import { profesionalProjects, projectsData } from '../locales/en/projects.en'
 import { motion } from 'framer-motion'
 import { useFilters } from '../hooks/useFilters'
 import { ProjectsGrid } from '../components/ProjectsGrid'

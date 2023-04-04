@@ -1,7 +1,7 @@
 import { Suspense, lazy } from 'react'
 import { motion } from 'framer-motion'
 import { Loader } from '../components'
-import { contactForm } from '../locales/en'
+import { contactForm } from '../locales/en/contact.en'
 const ContactForm = lazy(() => import('../components/ContactForm'))
 
 const Contact = () => {

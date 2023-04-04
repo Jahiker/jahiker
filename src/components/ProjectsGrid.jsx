@@ -1,5 +1,5 @@
 import { Tilt } from 'react-tilt'
-import { skillsList } from '../locales/en'
+import { skillsList } from '../locales/en/skills.en'
 import { FiGlobe, FiGithub } from 'react-icons/fi'
 
 import bgImage from '../assets/images/portada-1.webp'
