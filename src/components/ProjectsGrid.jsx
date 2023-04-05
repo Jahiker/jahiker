@@ -41,7 +41,7 @@ export const ProjectsGrid = ({ profesionalProjects, motion }) => {
                     <span key={tag} className='text-primary flex justify-center items-center border-2 w-[30px] h-[30px] rounded-full z-10'>
                       {skillsList.map(skill => {
                         if (tag.toLowerCase() === skill.name.toLowerCase()) {
-                          return <skill.icon key={skill.name} fill='#d5ff40' size='18px' />
+                          return <skill.icon key={skill.name} fill='#d5ff40' color='#292929' size='18px' />
                         } else {
                           return null
                         }

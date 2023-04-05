@@ -16,6 +16,7 @@ import petgramScreen from '../../assets/screenshots/petgram.png'
 import platziConfMerchScreen from '../../assets/screenshots/platzi-conf-merch.png'
 import todoReactScreen from '../../assets/screenshots/todo-react.png'
 import weatherReactScreen from '../../assets/screenshots/weather-react.png'
+import pokedexScreen from '../../assets/screenshots/pokedex.png'
 
 export const projectsData = {
   title: 'My Projects',
@@ -106,6 +107,15 @@ export const profesionalProjects = [
     source_code_link: null,
     site_link: 'https://glokalstore.com/',
     year: 2022
+  },
+  {
+    name: 'Pokedex',
+    description: 'Pokedex with React and Typescript',
+    tags: ['react', 'typescript', 'css'],
+    image: pokedexScreen,
+    source_code_link: 'https://github.com/Jahiker/pokedex-react-ts',
+    site_link: 'https://jahiker.github.io/pokedex-react-ts/',
+    year: 2023
   },
   {
     name: 'Touche International',
