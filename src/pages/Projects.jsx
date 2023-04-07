@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react'
-import { profesionalProjects, projectsData } from '../locales/en/projects.en'
 import { motion } from 'framer-motion'
 import { useFilters } from '../hooks/useFilters'
 import { ProjectsGrid } from '../components/ProjectsGrid'
@@ -18,11 +16,8 @@ const container = {
 }
 
 const Projects = () => {
-  const [filters, setfilters] = useState([])
-  useEffect(() => {
-    const { Filters } = useFilters()
-    setfilters(Filters)
-  }, [])
+  const { Filters, activeFilter, setActiveFilter, projectsList, projectsData } = useFilters()
+
   return (
     <div className='block bg-dark-mid rounded-xl p-5 sm:p-10'>
       <div className='flex justify-between items-start flex-col md:flex-row mb-20'>
@@ -34,7 +29,7 @@ const Projects = () => {
           {projectsData.description}
         </p>
       </div>
-      <ProjectsFilters filters={filters} />
+      <ProjectsFilters filters={Filters} activeFilter={activeFilter} setActiveFilter={setActiveFilter} />
       <hr className='hr02 my-10' />
       <motion.div
         className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3'
@@ -42,7 +37,10 @@ const Projects = () => {
         initial='hidden'
         animate='visible'
       >
-        <ProjectsGrid profesionalProjects={profesionalProjects} motion={motion} />
+        <ProjectsGrid
+          profesionalProjects={projectsList}
+          motion={motion}
+        />
       </motion.div>
     </div>
   )

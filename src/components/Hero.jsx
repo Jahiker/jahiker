@@ -62,7 +62,7 @@ const Hero = () => {
             duration: 1
           }}
           viewport={{ once: true }}
-          className='mb-5'
+          className='mb-5 font-medium'
         >
           {personalData.description}
         </motion.p>
