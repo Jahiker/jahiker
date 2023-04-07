@@ -2,9 +2,9 @@
 
 :dart: Improving every day
 
-<a href="https://jahiker.github.io/jahiker/" target="_blank">Site under construction...</a> 
+[My professional portfolio](https://jahiker.github.io/jahiker/)
 
-### Knowleges :brain:
+## Knowleges :brain
 
 - HTML
 - CSS
@@ -30,11 +30,11 @@
 - Liquid
 - MySql
 
-### Currently learning :nerd_face:
+## Currently learning :nerd_face
 
 - Node Js
 - MongoDb
 
-### Find me on Twitter :bird:
+## Find me on Twitter :bird:
 
 - https://twitter.com/Jahiker
