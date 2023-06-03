@@ -138,7 +138,7 @@ export const Header = () => {
                 onClick={() => setLang('es')}
               >
                 <span className='text-xs dark:text-primary'>Es</span>
-                <HiGlobeAlt className='dark:text-light' />
+                <HiGlobeAlt className='dark:text-primary' />
               </button>
               )
             : (
