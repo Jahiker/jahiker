@@ -125,7 +125,7 @@ export const Header = () => {
           >
             {darkTheme
               ? (
-                <HiOutlineSun size='20px' className='dark:text-light' />
+                <HiOutlineSun size='20px' className='dark:text-primary' />
                 )
               : (
                 <HiOutlineMoon size='20px' />
@@ -147,7 +147,7 @@ export const Header = () => {
                 onClick={() => setLang('en')}
               >
                 <span className='text-xs dark:text-primary'>En</span>
-                <HiGlobeAlt className='dark:text-light' />
+                <HiGlobeAlt className='dark:text-primary' />
               </button>
               )}
         </div>
