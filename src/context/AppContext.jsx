@@ -1,5 +1,10 @@
 import { useState, useEffect, createContext } from 'react'
 
+import { mainMenuEN, footerInfoEN } from '../locales/en/app.en'
+import { mainMenuES, footerInfoES } from '../locales/es/app.es'
+import { personalDataEN, socialNetworksEN } from '../locales/en/home.en'
+import { personalDataES, socialNetworksES } from '../locales/es/home.es'
+
 export const AppContext = createContext()
 
 export const AppProvider = ({ children }) => {
@@ -13,6 +18,11 @@ export const AppProvider = ({ children }) => {
       ? JSON.parse(window.localStorage.getItem('LANG_V1'))
       : 'en')
 
+  const [mainMenu, setMainMenu] = useState(mainMenuEN)
+  const [footerInfo, setFooterInfo] = useState(footerInfoEN)
+  const [personalData, setPersonalData] = useState(personalDataEN)
+  const [socialNetworks, setSocialNetworks] = useState(socialNetworksEN)
+
   useEffect(() => {
     window.localStorage.setItem('THEME_V1', JSON.stringify(darkTheme))
 
@@ -25,6 +35,18 @@ export const AppProvider = ({ children }) => {
 
   useEffect(() => {
     window.localStorage.setItem('LANG_V1', JSON.stringify(lang))
+
+    if (lang === 'en') {
+      setMainMenu(mainMenuEN)
+      setFooterInfo(footerInfoEN)
+      setPersonalData(personalDataEN)
+      setSocialNetworks(socialNetworksEN)
+    } else {
+      setMainMenu(mainMenuES)
+      setFooterInfo(footerInfoES)
+      setPersonalData(personalDataES)
+      setSocialNetworks(socialNetworksES)
+    }
   }, [lang])
 
   return (
@@ -33,7 +55,11 @@ export const AppProvider = ({ children }) => {
         darkTheme,
         setDarkTheme,
         lang,
-        setLang
+        setLang,
+        mainMenu,
+        footerInfo,
+        personalData,
+        socialNetworks
       }}
     >
       {children}

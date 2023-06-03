@@ -1,28 +1,28 @@
 const date = new Date()
 
-export const footerInfo = {
-  copy: `© All rights reserved - Jahiker Rojas </> - ${date.getFullYear()}`
+export const footerInfoES = {
+  copy: `© Todos los derechos reservados - Jahiker Rojas </> - ${date.getFullYear()}`
 }
 
-export const mainMenu = [
+export const mainMenuES = [
   {
-    label: 'Home',
+    label: 'Inicio',
     to: '/'
   },
   {
-    label: 'Skills',
+    label: 'Habilidades',
     to: '/skills'
   },
   {
-    label: 'Experience',
+    label: 'Experiencia',
     to: '/experience'
   },
   {
-    label: 'Projects',
+    label: 'Proyectos',
     to: '/projects'
   },
   {
-    label: 'Contact',
+    label: 'Contacto',
     to: '/contact'
   }
 ]

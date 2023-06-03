@@ -1,8 +1,12 @@
+import { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
-import { mainMenu, footerInfo } from '../locales/en/app.en'
+
 import { Logo } from './Logo'
+import { AppContext } from '../context/AppContext'
 
 export const Footer = () => {
+  const { mainMenu, footerInfo } = useContext(AppContext)
+
   return (
     <div className='flex flex-col md:flex-row justify-start items-center md:justify-between md:items-start gap-5 px-[30px] py-[30px] md:px-[60px] md:py-[40px] text-[12px] md:text-[14px] font-extralight bg-dark text-primary'>
       <span className='block max-w-[90%] text-center'>{footerInfo.copy}</span>

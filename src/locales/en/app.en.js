@@ -1,10 +1,10 @@
 const date = new Date()
 
-export const footerInfo = {
+export const footerInfoEN = {
   copy: `© All rights reserved - Jahiker Rojas </> - ${date.getFullYear()}`
 }
 
-export const mainMenu = [
+export const mainMenuEN = [
   {
     label: 'Home',
     to: '/'

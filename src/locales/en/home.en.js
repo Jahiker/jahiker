@@ -1,9 +1,9 @@
 import { TbBrandGithub, TbBrandLinkedin, TbDownload } from 'react-icons/tb'
-import resume from '../../assets/docs/Jahiker-Rojas-CV.pdf'
+import resume from '../../assets/docs/Jahiker-Rojas-CV-EN.pdf'
 
 const date = new Date()
 
-export const personalData = {
+export const personalDataEN = {
   name: 'Jahiker Rojas',
   country: 'Venezuela',
   city: 'Valencia',
@@ -14,7 +14,7 @@ export const personalData = {
     } years of experience developing Frontend and Backend web apps. Tech passionate and I love to learn new stuff. Check this site out and know more about me.`
 }
 
-export const socialNetworks = [
+export const socialNetworksEN = [
   {
     title: 'Linkedin',
     url: 'https://www.linkedin.com/in/jahiker-robert-rojas-zuniga-726b20121/',

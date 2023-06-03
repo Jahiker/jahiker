@@ -1,20 +1,20 @@
 import { TbBrandGithub, TbBrandLinkedin, TbDownload } from 'react-icons/tb'
-import resume from '../../assets/docs/Jahiker-Rojas-CV.pdf'
+import resume from '../../assets/docs/Jahiker-Rojas-CV-ES.pdf'
 
 const date = new Date()
 
-export const personalData = {
+export const personalDataES = {
   name: 'Jahiker Rojas',
   country: 'Venezuela',
   city: 'Valencia',
   telf: '+584244245378',
   email: 'rojasjahiker@gmail.com',
-  description: `I'm a web developer, with ${
+  description: `Soy un desarrollador web, con ${
       date.getFullYear() - 2020
-    } years of experience developing Frontend and Backend web apps. Tech passionate and I love to learn new stuff. Check this site out and know more about me.`
+    } años de experiencias desarrollando aplicaciones Frontend y Backend. Apacionado de la tecnología y me encanta aprender cosas nuevas. Echa un vistazo a este sitio y conoce más sobre mi.`
 }
 
-export const socialNetworks = [
+export const socialNetworksES = [
   {
     title: 'Linkedin',
     url: 'https://www.linkedin.com/in/jahiker-robert-rojas-zuniga-726b20121/',

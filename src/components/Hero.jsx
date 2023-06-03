@@ -1,10 +1,13 @@
+import { useContext } from 'react'
 import { motion } from 'framer-motion'
 
-import { personalData, socialNetworks } from '../locales/en/home.en'
 import avatar from '../assets/images/avatar.jpeg'
 import { Logo } from './Logo'
+import { AppContext } from '../context/AppContext'
 
 const Hero = () => {
+  const { personalData, socialNetworks } = useContext(AppContext)
+
   return (
     <div className='hero-wrapper flex flex-col justify-between gap-5'>
       <div className='flex justify-between items-center gap-5'>
