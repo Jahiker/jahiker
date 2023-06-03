@@ -83,7 +83,7 @@ const Hero = () => {
             <a
               key={index}
               href={item.url}
-              className='flex justify-center items-center gap-3 border-2 border-dark-mid border-solid px-5 py-1 rounded-[20px] bg-dark text-primary hover:bg-primary hover:text-dark w-full md:w-auto'
+              className='flex justify-center items-center gap-3 border-2 border-dark-mid border-solid px-5 py-1 rounded-[20px] bg-dark text-primary hover:bg-primary hover:text-dark w-full md:w-auto dark:bg-gray'
               target='_blank'
               rel='noopener noreferrer'
             >
