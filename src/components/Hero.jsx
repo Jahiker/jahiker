@@ -16,7 +16,7 @@ const Hero = () => {
             duration: 1
           }}
           viewport={{ once: true }}
-          className='uppercase text-[40px] leading-[40px] sm:text-[60px] sm:leading-[60px] md:text-[90px] md:leading-[90px] font-bold'
+          className='uppercase text-[40px] leading-[40px] sm:text-[60px] sm:leading-[60px] md:text-[90px] md:leading-[90px] font-bold dark:text-primary'
         >
           {personalData.name}
         </motion.h1>
@@ -28,7 +28,7 @@ const Hero = () => {
             duration: 1
           }}
           viewport={{ once: true }}
-          className='uppercase text-[30px] leading-[40px] sm:text-[60px] sm:leading-[60px] md:text-[85px] md:leading-[70px] font-bold'
+          className='uppercase text-[30px] leading-[40px] sm:text-[60px] sm:leading-[60px] md:text-[85px] md:leading-[70px] font-bold dark:text-primary'
         >
           {'</>'}
         </motion.p>
@@ -62,7 +62,7 @@ const Hero = () => {
             duration: 1
           }}
           viewport={{ once: true }}
-          className='mb-5 font-medium'
+          className='mb-5 font-medium dark:text-light'
         >
           {personalData.description}
         </motion.p>

@@ -1,10 +1,11 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { NavLink } from 'react-router-dom'
 import { Logo } from './Logo'
-import { HiMenu, HiX } from 'react-icons/hi'
+import { HiMenu, HiX, HiOutlineSun, HiGlobeAlt, HiOutlineMoon } from 'react-icons/hi'
 import { motion } from 'framer-motion'
 
 import { mainMenu } from '../locales/en/app.en'
+import { AppContext } from '../context/AppContext'
 
 const mobileMenu = {
   open: {
@@ -28,13 +29,20 @@ const mobileMenu = {
 
 export const Header = () => {
   const [openMenu, setOpenMenu] = useState(false)
+  const { darkTheme, setDarkTheme, lang, setLang } = useContext(AppContext)
 
   return (
     <div className='flex justify-between items-center gap-5 px-[20px] md:px-[40px] py-[20px] relative'>
       <NavLink to='/'>
         <div className='flex justify-start items-center gap-3'>
-          <Logo size='50px' />
-          <h2 className='text-[18px] w-[115px] text-left'>JKR</h2>
+          {darkTheme
+            ? (
+              <Logo size='50px' fill='#c4c4c4' />
+              )
+            : (
+              <Logo size='50px' />
+              )}
+          <h2 className='text-[18px] w-[115px] text-left dark:text-primary'>JKR</h2>
         </div>
       </NavLink>
       <nav className='hidden md:flex justify-end gap-4'>
@@ -43,11 +51,33 @@ export const Header = () => {
             <NavLink
               key={`item-menu-${index}`}
               to={item.to}
-              className='text-[16px] md:text-[12px] px-2 py-1 hover:text-primary hover:bg-black'
+              className='text-[16px] md:text-[12px] px-2 py-1 hover:text-primary hover:bg-black dark:text-primary dark:hover:text-light'
             >
               {item.label}
             </NavLink>
           ))}
+        <button className='flex justify-center items-center' onClick={() => setDarkTheme(!darkTheme)}>
+          {darkTheme
+            ? (
+              <HiOutlineSun size='20px' className='dark:text-light' />
+              )
+            : (
+              <HiOutlineMoon size='20px' />
+              )}
+        </button>
+        {lang === 'en'
+          ? (
+            <button className='flex justify-center items-center gap-1' onClick={() => setLang('es')}>
+              <span className='text-xs dark:text-primary'>Es</span>
+              <HiGlobeAlt className='dark:text-light' />
+            </button>
+            )
+          : (
+            <button className='flex justify-center items-center gap-1' onClick={() => setLang('en')}>
+              <span className='text-xs dark:text-primary'>En</span>
+              <HiGlobeAlt className='dark:text-light' />
+            </button>
+            )}
       </nav>
 
       <motion.nav
@@ -71,12 +101,36 @@ export const Header = () => {
               {item.label}
             </NavLink>
           ))}
+        <div className='flex justify-between'>
+          <button className='flex justify-center items-center' onClick={() => setDarkTheme(!darkTheme)}>
+            {darkTheme
+              ? (
+                <HiOutlineSun size='20px' className='dark:text-light' />
+                )
+              : (
+                <HiOutlineMoon size='20px' />
+                )}
+          </button>
+          {lang === 'en'
+            ? (
+              <button className='flex justify-center items-center gap-1' onClick={() => setLang('es')}>
+                <span className='text-xs dark:text-primary'>Es</span>
+                <HiGlobeAlt className='dark:text-light' />
+              </button>
+              )
+            : (
+              <button className='flex justify-center items-center gap-1' onClick={() => setLang('en')}>
+                <span className='text-xs dark:text-primary'>En</span>
+                <HiGlobeAlt className='dark:text-light' />
+              </button>
+              )}
+        </div>
       </motion.nav>
       <button
         className='inline-block md:hidden cursor-pointer'
         onClick={() => setOpenMenu(!openMenu)}
       >
-        {openMenu ? <HiX size='30px' /> : <HiMenu size='30px' />}
+        {openMenu ? <HiX size='30px' className='dark:text-light' /> : <HiMenu size='30px' className='dark:text-light' />}
       </button>
     </div>
   )
