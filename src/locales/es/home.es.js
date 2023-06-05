@@ -28,7 +28,7 @@ export const socialNetworksES = [
     download: false
   },
   {
-    title: 'Resume',
+    title: 'Resumen Curricular',
     url: resume,
     icon: TbDownload,
     download: true

@@ -6,7 +6,7 @@ import { Logo } from './Logo'
 import { AppContext } from '../context/AppContext'
 
 const Hero = () => {
-  const { personalData, socialNetworks } = useContext(AppContext)
+  const { personalData, socialNetworks, darkTheme, lang } = useContext(AppContext)
 
   return (
     <div className='hero-wrapper flex flex-col justify-between gap-5'>
@@ -70,7 +70,13 @@ const Hero = () => {
           {personalData.description}
         </motion.p>
         <div className='flex justify-center my-5'>
-          <Logo size='30px' rotation />
+          {darkTheme
+            ? (
+              <Logo size='30px' fill='#d5ff40' rotation />
+              )
+            : (
+              <Logo size='30px' rotation />
+              )}
         </div>
         <motion.div
           initial={{ y: '100%', opacity: 0 }}
@@ -94,7 +100,13 @@ const Hero = () => {
               <span className='text-[16px]'>{item.title}</span>
             </a>
           ))}
-          <hr className='hr hidden md:w-[50%] sm:flex' />
+          {lang === 'es'
+            ? (
+              <hr className='hr hidden md:w-[30vw] sm:flex' />
+              )
+            : (
+              <hr className='hr hidden md:w-[40vw] sm:flex' />
+              )}
         </motion.div>
       </div>
     </div>

@@ -53,7 +53,7 @@ export const Header = () => {
           </h2>
         </div>
       </NavLink>
-      <nav className='hidden md:flex justify-end gap-4'>
+      <nav className='hidden lg:flex justify-end gap-4'>
         {mainMenu &&
           mainMenu.map((item, index) => (
             <NavLink
@@ -153,7 +153,7 @@ export const Header = () => {
         </div>
       </motion.nav>
       <button
-        className='inline-block md:hidden cursor-pointer'
+        className='inline-block lg:hidden cursor-pointer'
         onClick={() => setOpenMenu(!openMenu)}
       >
         {openMenu
