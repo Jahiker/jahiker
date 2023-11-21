@@ -1,8 +1,10 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import { skillsList } from '../locales/en/skills.en'
-import { profesionalProjects, projectsData } from '../locales/en/projects.en'
+
+import { AppContext } from '../context/AppContext'
 
 export const useFilters = () => {
+  const { profesionalProjects, projectsData } = useContext(AppContext)
   const [activeFilter, setActiveFilter] = useState('all')
   const [projectsList, setProjectsList] = useState(profesionalProjects)
 

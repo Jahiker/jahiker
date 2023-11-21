@@ -4,6 +4,8 @@ import { mainMenuEN, footerInfoEN } from '../locales/en/app.en'
 import { mainMenuES, footerInfoES } from '../locales/es/app.es'
 import { personalDataEN, socialNetworksEN } from '../locales/en/home.en'
 import { personalDataES, socialNetworksES } from '../locales/es/home.es'
+import { projectsDataEN, profesionalProjectsEN } from '../locales/en/projects.en'
+import { projectsDataES, profesionalProjectsES } from '../locales/es/projects.es'
 
 export const AppContext = createContext()
 
@@ -22,6 +24,8 @@ export const AppProvider = ({ children }) => {
   const [footerInfo, setFooterInfo] = useState(footerInfoEN)
   const [personalData, setPersonalData] = useState(personalDataEN)
   const [socialNetworks, setSocialNetworks] = useState(socialNetworksEN)
+  const [projectsData, setProjectsData] = useState(projectsDataEN)
+  const [profesionalProjects, setProfesionalProjects] = useState(profesionalProjectsEN)
 
   useEffect(() => {
     window.localStorage.setItem('THEME_V1', JSON.stringify(darkTheme))
@@ -41,11 +45,15 @@ export const AppProvider = ({ children }) => {
       setFooterInfo(footerInfoEN)
       setPersonalData(personalDataEN)
       setSocialNetworks(socialNetworksEN)
+      setProjectsData(projectsDataEN)
+      setProfesionalProjects(profesionalProjectsEN)
     } else {
       setMainMenu(mainMenuES)
       setFooterInfo(footerInfoES)
       setPersonalData(personalDataES)
       setSocialNetworks(socialNetworksES)
+      setProjectsData(projectsDataES)
+      setProfesionalProjects(profesionalProjectsES)
     }
   }, [lang])
 
@@ -59,7 +67,9 @@ export const AppProvider = ({ children }) => {
         mainMenu,
         footerInfo,
         personalData,
-        socialNetworks
+        socialNetworks,
+        projectsData,
+        profesionalProjects
       }}
     >
       {children}

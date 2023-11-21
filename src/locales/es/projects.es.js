@@ -1,4 +1,4 @@
-import jahikerScreen from '../../assets/screenshots/jahiker.png'
+import ieb from '../../assets/screenshots/ieb.png'
 import adhScreen from '../../assets/screenshots/adh.png'
 import celsiaScreen from '../../assets/screenshots/celsia.png'
 import falkonTutorialsScreen from '../../assets/screenshots/falkon-tutoriales.png'
@@ -16,21 +16,23 @@ import petgramScreen from '../../assets/screenshots/petgram.png'
 import platziConfMerchScreen from '../../assets/screenshots/platzi-conf-merch.png'
 import todoReactScreen from '../../assets/screenshots/todo-react.png'
 import weatherReactScreen from '../../assets/screenshots/weather-react.png'
+import pokedexScreen from '../../assets/screenshots/pokedex.png'
+import productPage from '../../assets/screenshots/product-page.png'
+import fapromet from '../../assets/screenshots/fapromet.png'
 
-export const projectsData = {
-  title: 'My Projects',
+export const projectsDataES = {
+  title: 'Mis Proyectos',
   description:
-    "These are some of the project that i've worked on, check them out and know more about my professional background."
+    'Estos son algunos de los proyectos en los que he trabajado, échales un vistazo y conoce más sobre mi trayectoria profesional.'
 }
 
-export const profesionalProjects = [
+export const profesionalProjectsES = [
   {
-    name: 'Professional Portfolio',
+    name: 'IEB Portal',
     description: 'Static web portfolio.',
-    tags: ['react', 'tailwind', 'css'],
-    image: jahikerScreen,
-    source_code_link: 'https://github.com/Jahiker/jahiker',
-    site_link: 'https://jahiker.github.io/jahiker/',
+    tags: ['react', 'wordpress', 'sass'],
+    image: ieb,
+    site_link: 'https://portal.ieb.co/es/',
     year: 2023
   },
   {
@@ -81,6 +83,23 @@ export const profesionalProjects = [
     year: 2020
   },
   {
+    name: 'Fapromet CL',
+    description:
+      'Corporate website, for user information and contact form.',
+    tags: [
+      'wordpress',
+      'php',
+      'javascript',
+      'react',
+      'sass',
+      'webpack'
+    ],
+    image: fapromet,
+    source_code_link: null,
+    site_link: 'https://fapromet.cl/',
+    year: 2023
+  },
+  {
     name: 'Jacky Milan',
     description: 'E-commerce for household linen.',
     tags: ['shopify', 'javascript', 'web components', 'css'],
@@ -106,6 +125,15 @@ export const profesionalProjects = [
     source_code_link: null,
     site_link: 'https://glokalstore.com/',
     year: 2022
+  },
+  {
+    name: 'Pokedex',
+    description: 'Pokedex with React and Typescript',
+    tags: ['react', 'typescript', 'css'],
+    image: pokedexScreen,
+    source_code_link: 'https://github.com/Jahiker/pokedex-react-ts',
+    site_link: 'https://jahiker.github.io/pokedex-react-ts/',
+    year: 2023
   },
   {
     name: 'Touche International',
@@ -143,6 +171,15 @@ export const profesionalProjects = [
     source_code_link: 'https://github.com/Jahiker/platzi-conf-merch',
     site_link: 'https://platzi-conf-merge-89c4a.web.app/',
     year: 2022
+  },
+  {
+    name: 'Product Page',
+    description: 'E-commerce product page',
+    tags: ['javascript', 'sass', 'web components'],
+    image: productPage,
+    source_code_link: 'https://github.com/Jahiker/platzi-conf-merch',
+    site_link: 'https://platzi-conf-merge-89c4a.web.app/',
+    year: 2023
   },
   {
     name: 'To do App',
