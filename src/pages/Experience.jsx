@@ -5,6 +5,7 @@ import {
 import { motion } from 'framer-motion'
 import { experience } from '../locales/en/experience.en'
 import 'react-vertical-timeline-component/style.min.css'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 const Experience = () => {
   return (
@@ -31,10 +32,12 @@ const Experience = () => {
             iconStyle={{ background: item.iconBg }}
             icon={
               <div className='flex justify-center items-center w-full h-full'>
-                <img
+                <LazyLoadImage
                   src={item.icon}
                   alt={item.company_name}
                   className='w-[60%] h-[60%] object-cover'
+                  width='24'
+                  height='24'
                 />
               </div>
             }

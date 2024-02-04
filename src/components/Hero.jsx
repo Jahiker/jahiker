@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import { motion } from 'framer-motion'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 import avatar from '../assets/images/avatar.jpeg'
 import { Logo } from './Logo'
@@ -48,10 +49,12 @@ const Hero = () => {
           viewport={{ once: true }}
           className='p-2 my-5 bg-dark-op-300 flex gap-3 relative before:bg-pill before:w-full before:h-full before:absolute before:inset-0 before:z-0 before:grayscale before:contrast-200 rounded-[40px] overflow-hidden'
         >
-          <img
+          <LazyLoadImage
             src={avatar}
             alt={personalData.name}
             className='w-[50px] h-[50px] rounded-full z-10'
+            width='50'
+            height='50'
           />
         </motion.div>
       </div>

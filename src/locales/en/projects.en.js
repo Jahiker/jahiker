@@ -19,6 +19,7 @@ import weatherReactScreen from '../../assets/screenshots/weather-react.png'
 import pokedexScreen from '../../assets/screenshots/pokedex.png'
 import productPage from '../../assets/screenshots/product-page.png'
 import fapromet from '../../assets/screenshots/fapromet.png'
+import natesa from '../../assets/screenshots/natesagroup.png'
 
 export const projectsDataEN = {
   title: 'My Projects',
@@ -28,8 +29,16 @@ export const projectsDataEN = {
 
 export const profesionalProjectsEN = [
   {
+    name: 'Natesa Group',
+    description: 'Website for a real estate development company.',
+    tags: ['react', 'wordpress', 'sass'],
+    image: natesa,
+    site_link: 'https://natesagroup.com/',
+    year: 2024
+  },
+  {
     name: 'IEB Portal',
-    description: 'Static web portfolio.',
+    description: 'Corporate website.',
     tags: ['react', 'wordpress', 'sass'],
     image: ieb,
     site_link: 'https://portal.ieb.co/es/',
