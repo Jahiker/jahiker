@@ -1,6 +1,6 @@
 > # Jahiker Rojas - Fullstack Web Developer
 
-- I’m working as a Developer and contributing to frontend and backend for building web applications for.
+- I'm a 4 years experience Web Developer and I'm working contributing to frontend and backend for building web applications.
 
 - I Love to learn new technologies and exploring content about the tech world.
 
