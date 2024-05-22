@@ -20,6 +20,7 @@ import pokedexScreen from '../../assets/screenshots/pokedex.png'
 import productPage from '../../assets/screenshots/product-page.png'
 import fapromet from '../../assets/screenshots/fapromet.png'
 import natesa from '../../assets/screenshots/natesagroup.png'
+import pugstagram from '../../assets/screenshots/pugstagram.jpg'
 
 export const projectsDataEN = {
   title: 'My Projects',
@@ -28,6 +29,16 @@ export const projectsDataEN = {
 }
 
 export const profesionalProjectsEN = [
+  {
+    name: 'Pusgtagram',
+    description: 'Project for svelte course on Platzi.',
+    tags: ['svelte', 'css'],
+    image: pugstagram,
+    source_code_link: 'https://github.com/Jahiker/pugstagram-svelte',
+    site_link:
+      'https://664d6835a7057384df8fab15--pugstagram-svelte-platzi.netlify.app/',
+    year: 2024
+  },
   {
     name: 'Natesa Group',
     description: 'Website for a real estate development company.',
@@ -93,16 +104,8 @@ export const profesionalProjectsEN = [
   },
   {
     name: 'Fapromet CL',
-    description:
-      'Corporate website, for user information and contact form.',
-    tags: [
-      'wordpress',
-      'php',
-      'javascript',
-      'react',
-      'sass',
-      'webpack'
-    ],
+    description: 'Corporate website, for user information and contact form.',
+    tags: ['wordpress', 'php', 'javascript', 'react', 'sass', 'webpack'],
     image: fapromet,
     source_code_link: null,
     site_link: 'https://fapromet.cl/',

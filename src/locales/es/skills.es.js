@@ -27,6 +27,7 @@ import { WebComponents } from '../../components/Icons/WebComponents'
 import { Webpack } from '../../components/Icons/Webpack'
 import { Astro } from '../../components/Icons/Astro'
 import { Vite } from '../../components/Icons/Vite'
+import { Svelte } from '../../components/Icons/Svelte'
 
 export const skillsList = [
   { name: 'Html', icon: FaHtml5 },
@@ -37,6 +38,7 @@ export const skillsList = [
   { name: 'React', icon: FaReact },
   { name: 'Vue', icon: FaVuejs },
   { name: 'Astro', icon: Astro },
+  { name: 'Svelte', icon: Svelte },
   { name: 'Web Components', icon: WebComponents },
   { name: 'JQuery', icon: DiJqueryLogo },
   { name: 'Laravel', icon: FaLaravel },
