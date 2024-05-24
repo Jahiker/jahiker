@@ -67,6 +67,7 @@ export const Header = () => {
         <button
           className='flex justify-center items-center'
           onClick={() => setDarkTheme(!darkTheme)}
+          aria-label='Theme switch'
         >
           {darkTheme
             ? (
@@ -81,6 +82,7 @@ export const Header = () => {
             <button
               className='flex justify-center items-center gap-1'
               onClick={() => setLang('es')}
+              aria-label='Spanish Language Switch'
             >
               <span className='text-xs dark:text-primary'>Es</span>
               <HiGlobeAlt className='dark:text-primary' />
@@ -90,6 +92,7 @@ export const Header = () => {
             <button
               className='flex justify-center items-center gap-1'
               onClick={() => setLang('en')}
+              aria-label='English Language Switch'
             >
               <span className='text-xs dark:text-primary'>En</span>
               <HiGlobeAlt className='dark:text-primary' />
