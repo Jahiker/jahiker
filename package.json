@@ -1,41 +1,17 @@
 {
-  "homepage": "https://jahiker.github.io/jahiker",
-  "name": "jahiker",
-  "private": true,
-  "version": "0.0.0",
+  "name": "",
   "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "start": "npm run dev",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "@emailjs/browser": "^3.10.0",
-    "framer-motion": "^10.9.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-hook-form": "^7.43.8",
-    "react-icons": "^4.8.0",
-    "react-lazy-load-image-component": "^1.6.0",
-    "react-router-dom": "^6.9.0",
-    "react-tilt": "^1.0.2",
-    "react-vertical-timeline-component": "^3.6.0"
-  },
-  "devDependencies": {
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
-    "@vitejs/plugin-react": "^3.1.0",
-    "autoprefixer": "^10.4.14",
-    "gh-pages": "^5.0.0",
-    "postcss": "^8.4.21",
-    "standard": "^17.0.0",
-    "tailwindcss": "^3.2.7",
-    "vite": "^4.2.0"
-  },
-  "eslintConfig": {
-    "extends": "./node_modules/standard/eslintrc.json"
+    "astro": "^4.13.1",
+    "@astrojs/check": "^0.9.1",
+    "typescript": "^5.5.4"
   }
 }

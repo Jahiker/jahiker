@@ -1,54 +1,54 @@
-> # Jahiker Rojas - Fullstack Web Developer
+# Astro Starter Kit: Basics
 
-- I'm a 4 years experience Web Developer and I'm working contributing to frontend and backend for building web applications. I Love to learn new technologies and exploring content about the tech world.
+```sh
+npm create astro@latest -- --template basics
+```
 
-- How to reach me:
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
 
-- [![Static Badge](https://img.shields.io/badge/-Linkedin-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/jahiker-robert-rojas-zuniga-726b20121/)
-[![Static Badge](https://img.shields.io/badge/-Portfolio-green?style=flat&logo=linkfire&logoColor=white)](https://jahiker.github.io/jahiker/)
-[![Static Badge](https://img.shields.io/badge/-Email-red?style=flat&logo=gmail&logoColor=white)](mailto:rojasjahiker@gmail.com)
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-> ## Skills and Knowleges
+![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
 
-![Static Badge](https://img.shields.io/badge/html-gray?logo=html5)
-![Static Badge](https://img.shields.io/badge/css-gray?logo=css3)
-![Static Badge](https://img.shields.io/badge/javascript-gray?logo=javascript)
-![Static Badge](https://img.shields.io/badge/typescript-gray?logo=typescript)
-![Static Badge](https://img.shields.io/badge/php-gray?logo=php)
-![Static Badge](https://img.shields.io/badge/react-gray?logo=react)
-![Static Badge](https://img.shields.io/badge/nextjs-gray?logo=nextdotjs)
-![Static Badge](https://img.shields.io/badge/vue-gray?logo=vuedotjs)
-![Static Badge](https://img.shields.io/badge/astro-gray?logo=astro)
-![Static Badge](https://img.shields.io/badge/svelte-gray?logo=svelte)
-![Static Badge](https://img.shields.io/badge/laravel-gray?logo=laravel)
-![Static Badge](https://img.shields.io/badge/nodejs-gray?logo=nodedotjs)
-![Static Badge](https://img.shields.io/badge/express-gray?logo=express)
-![Static Badge](https://img.shields.io/badge/tailwindcss-gray?logo=tailwindcss)
-![Static Badge](https://img.shields.io/badge/bootstrap-gray?logo=bootstrap)
-![Static Badge](https://img.shields.io/badge/mui-gray?logo=mui)
-![Static Badge](https://img.shields.io/badge/vuetify-gray?logo=vuetify)
-![Static Badge](https://img.shields.io/badge/sass-gray?logo=sass)
-![Static Badge](https://img.shields.io/badge/less-gray?logo=less)
-![Static Badge](https://img.shields.io/badge/stylus-gray?logo=stylus)
-![Static Badge](https://img.shields.io/badge/shopify-gray?logo=shopify)
-![Static Badge](https://img.shields.io/badge/wordpress-gray?logo=wordpress)
-![Static Badge](https://img.shields.io/badge/strapi-gray?logo=strapi)
-![Static Badge](https://img.shields.io/badge/mysql-gray?logo=mysql)
-![Static Badge](https://img.shields.io/badge/mongodb-gray?logo=mongodb)
-![Static Badge](https://img.shields.io/badge/postman-gray?logo=postman)
-![Static Badge](https://img.shields.io/badge/git-gray?logo=git)
-![Static Badge](https://img.shields.io/badge/github-gray?logo=github)
-![Static Badge](https://img.shields.io/badge/docker-gray?logo=docker)
-![Static Badge](https://img.shields.io/badge/webpack-gray?logo=webpack)
-![Static Badge](https://img.shields.io/badge/vite-gray?logo=vite)
-![Static Badge](https://img.shields.io/badge/babel-gray?logo=babel)
-![Static Badge](https://img.shields.io/badge/visualstudiocode-gray?logo=visualstudiocode)
-![Static Badge](https://img.shields.io/badge/windows-gray?logo=windows)
-![Static Badge](https://img.shields.io/badge/adobexd-gray?logo=adobexd)
-![Static Badge](https://img.shields.io/badge/figma-gray?logo=figma)
+## 🚀 Project Structure
 
-> ### My Stats
+Inside of your Astro project, you'll see the following folders and files:
 
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=jahiker&theme=dark)](https://git.io/streak-stats)
+```text
+/
+├── public/
+│   └── favicon.svg
+├── src/
+│   ├── components/
+│   │   └── Card.astro
+│   ├── layouts/
+│   │   └── Layout.astro
+│   └── pages/
+│       └── index.astro
+└── package.json
+```
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=jahiker&layout=compact&theme=vision-friendly-dark)](https://github.com/anuraghazra/github-readme-stats)
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+
+Any static assets, like images, can be placed in the `public/` directory.
+
+## 🧞 Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
+
+## 👀 Want to learn more?
+
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
