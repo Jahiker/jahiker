@@ -1,0 +1,33 @@
+<section class="border-b border-white/20 bg-accent-500">
+  <div
+    class="mx-auto max-w-7xl border-x border-white/20 px-8 py-12 gradient-grid"
+  >
+    <div class="mx-auto">
+      <h3 class="text-3xl font-display text-white uppercase">My work</h3>
+    </div>
+  </div>
+</section>
+<section class="border-b border-white/20 bg-accent-500">
+  <div class="mx-auto max-w-7xl border-white/20 border-x">
+    <div class="glide">
+      <div data-glide-el="controls">
+        <button data-glide-dir="<<">Start</button>
+        <button data-glide-dir=">>">End</button>
+      </div>
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          <li class="glide__slide text-white">0</li>
+          <li class="glide__slide text-white">1</li>
+          <li class="glide__slide text-white">2</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script type="module" is:inline>
+  import Glide, { Controls } from "@glidejs/glide";
+
+  console.log(Glide)
+  new Glide(".glide").mount({ Controls });
+</script>

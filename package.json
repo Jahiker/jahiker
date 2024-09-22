@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "jahiker-rojas-portfolio",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -10,8 +10,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.13.1",
-    "@astrojs/check": "^0.9.1",
-    "typescript": "^5.5.4"
+    "@astrojs/check": "^0.9.3",
+    "@astrojs/sitemap": "^3.1.6",
+    "@astrojs/tailwind": "^5.1.1",
+    "@glidejs/glide": "^3.6.2",
+    "astro": "^4.15.8",
+    "tailwindcss": "^3.4.12",
+    "typescript": "^5.6.2"
   }
 }
