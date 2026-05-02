@@ -3,7 +3,6 @@
 import { content as contentEn } from '../../data/en/content'
 import { content as contentEs } from '../../data/es/content'
 import { getRelativeLocaleUrl } from 'astro:i18n'
-import avatarSrc from '../../images/avatar.jpeg'
 
 const locale = Astro.currentLocale ?? 'en'
 const { nav, contact } = locale === 'es' ? contentEs : contentEn
@@ -21,16 +20,12 @@ const esUrl = getRelativeLocaleUrl('es', '/')
       <!-- Logo -->
       <a
         href={enUrl}
-        class="font-display text-white text-xs uppercase px-8 py-5 inline-flex items-center gap-3 hover:text-primary transition-colors duration-200"
+        aria-label="Jahiker Rojas — home"
+        class="text-white px-8 py-5 inline-flex items-center hover:text-primary transition-colors duration-200"
       >
-        <img
-          src={avatarSrc.src}
-          alt="Jahiker Rojas"
-          width="28"
-          height="28"
-          class="w-7 h-7 rounded-full object-cover ring-1 ring-primary shrink-0"
-        />
-        JAHIKER ROJAS <span aria-hidden="true">&rarr;</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" aria-hidden="true" class="h-7 w-auto">
+          <text x="0" y="80" font-family="Basement, sans-serif" font-weight="700" font-size="80" fill="currentColor">JKR<tspan fill="#D5FF40">.</tspan></text>
+        </svg>
       </a>
 
       <!-- Desktop: nav + actions -->
