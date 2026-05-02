@@ -1,0 +1,80 @@
+---
+// spec: specs/13-skills-section.md
+import { skills } from '../../data/skills'
+
+const locale = Astro.currentLocale ?? 'en'
+
+const heading = locale === 'es' ? 'Habilidades' : 'Skills'
+
+const categoryLabels: Record<string, string> = locale === 'es'
+  ? { frontend: 'Frontend', backend: 'Backend', tools: 'Herramientas' }
+  : { frontend: 'Frontend', backend: 'Backend', tools: 'Tools' }
+
+const categories = ['frontend', 'backend', 'tools'] as const
+
+const byCategory = (cat: typeof categories[number]) =>
+  skills.filter(s => s.category === cat)
+
+const deviconBase = 'https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons'
+const iconVariant: Record<string, string> = {
+  tailwindcss: 'plain',
+  graphql: 'plain',
+  express: 'original-wordmark',
+  github: 'original',
+  framer: 'original',
+  astro: 'plain',
+  fastapi: 'original',
+}
+const iconUrl = (slug: string) => {
+  const variant = iconVariant[slug] ?? 'original'
+  return `${deviconBase}/${slug}/${slug}-${variant}.svg`
+}
+---
+
+<section id="skills" class="border-b border-white/20">
+  <div class="mx-auto max-w-7xl border-x border-white/20">
+
+    <!-- Heading -->
+    <div class="px-8 py-6 border-b border-white/20 gradient-grid">
+      <h2 class="font-display text-white text-3xl uppercase">{heading}</h2>
+    </div>
+
+    <!-- Categories grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-3">
+      {categories.map((cat, i) => (
+        <div class:list={[
+          'flex flex-col border-b border-white/20 lg:border-b-0',
+          i < categories.length - 1 ? 'lg:border-r lg:border-white/20' : '',
+        ]}>
+
+          <!-- Category heading -->
+          <div class="px-8 py-5 border-b border-white/20">
+            <p class="font-display text-primary text-xs uppercase">{categoryLabels[cat]}</p>
+          </div>
+
+          <!-- Badges -->
+          <div class="px-6 py-6 flex flex-wrap gap-2">
+            {byCategory(cat).map(skill => (
+              <span class="inline-flex items-center gap-2 border border-white/20 hover:border-primary/60 hover:text-white text-white/60 font-display text-xs uppercase px-4 py-2 rounded-full transition-colors duration-200">
+                {skill.icon && (
+                  <img
+                    src={iconUrl(skill.icon)}
+                    alt=""
+                    width="14"
+                    height="14"
+                    class="w-3.5 h-3.5 opacity-70"
+                    loading="lazy"
+                    onerror="this.style.display='none'"
+                  />
+                )}
+                {skill.name}
+              </span>
+            ))}
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

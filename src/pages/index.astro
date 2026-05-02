@@ -1,0 +1,25 @@
+---
+// spec: specs/17-pages-assembly.md
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/sections/Hero.astro";
+import About from "../components/sections/About.astro";
+import Skills from "../components/sections/Skills.astro";
+import Projects from "../components/sections/Work.astro";
+import Experience from "../components/sections/Experience.astro";
+import Contact from "../components/sections/Contact.astro";
+---
+
+<Layout
+  title="Jahiker Rojas - Web Developer"
+  description="Fullstack Developer building fast, beautiful web experiences."
+  lang="en"
+>
+  <main>
+    <Hero />
+    <About />
+    <Skills />
+    <Projects />
+    <Experience />
+    <Contact />
+  </main>
+</Layout>

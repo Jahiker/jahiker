@@ -1,0 +1,65 @@
+---
+// spec: specs/15-experience-section.md
+import { experience as experienceEn } from '../../data/en/experience'
+import { experience as experienceEs } from '../../data/es/experience'
+
+const locale = Astro.currentLocale ?? 'en'
+const experience = locale === 'es' ? experienceEs : experienceEn
+const heading = locale === 'es' ? 'Experiencia' : 'Experience'
+---
+
+<section id="experience" class="border-b border-white/20">
+  <div class="mx-auto max-w-7xl border-x border-white/20">
+
+    <!-- Heading -->
+    <div class="px-8 py-6 border-b border-white/20 gradient-grid">
+      <h2 class="font-display text-white text-3xl uppercase">{heading}</h2>
+    </div>
+
+    <!-- Timeline -->
+    <div class="divide-y divide-white/10">
+      {experience.map((item, i) => (
+        <div class="grid grid-cols-1 lg:grid-cols-[200px_1fr] group">
+
+          <!-- Period -->
+          <div class="px-8 py-6 lg:py-8 border-b border-white/10 lg:border-b-0 lg:border-r lg:border-white/20 flex lg:flex-col lg:justify-start gap-3 lg:gap-2">
+            <span class="font-display text-primary text-xs uppercase leading-relaxed">
+              {item.period}
+            </span>
+          </div>
+
+          <!-- Content -->
+          <div class="px-8 py-6 lg:py-8 flex flex-col gap-3 relative">
+
+            <!-- Dot connector (desktop) -->
+            <div class="hidden lg:block absolute left-0 top-9 w-2 h-2 rounded-full bg-primary -translate-x-1/2 ring-2 ring-black"></div>
+
+            <!-- Role + company -->
+            <div>
+              <h3 class="font-display text-white text-sm uppercase">{item.role}</h3>
+              <p class="font-display text-white/40 text-xs uppercase mt-0.5">{item.company}</p>
+            </div>
+
+            <!-- Description -->
+            <p class="text-white/50 text-sm leading-relaxed">
+              {item.description}
+            </p>
+
+            <!-- Stack pills -->
+            {item.stack && item.stack.length > 0 && (
+              <div class="flex flex-wrap gap-1.5 pt-1">
+                {item.stack.map(tech => (
+                  <span class="font-display text-white/30 text-xs uppercase border border-white/10 px-2.5 py-1 rounded-full">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            )}
+
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

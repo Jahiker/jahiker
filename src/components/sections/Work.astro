@@ -1,0 +1,79 @@
+---
+// spec: specs/14-projects-section.md
+import '@glidejs/glide/dist/css/glide.core.min.css'
+import { projects as projectsEn } from '../../data/en/projects'
+import { projects as projectsEs } from '../../data/es/projects'
+import ProjectCard from '../ui/ProjectCard.astro'
+
+const locale = Astro.currentLocale ?? 'en'
+const projects = locale === 'es' ? projectsEs : projectsEn
+
+const heading    = locale === 'es' ? 'Proyectos'    : 'Projects'
+const viewLabel  = locale === 'es' ? 'Ver proyecto' : 'View project'
+const sourceLabel = locale === 'es' ? 'Código'      : 'Source'
+const prevLabel  = locale === 'es' ? 'Anterior'     : 'Previous'
+const nextLabel  = locale === 'es' ? 'Siguiente'    : 'Next'
+---
+
+<section id="projects" class="border-b border-white/20">
+  <div class="mx-auto max-w-7xl border-x border-white/20">
+
+    <div class="glide">
+
+      <!-- Heading + controls -->
+      <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between px-8 py-6 border-b border-white/20 gradient-grid">
+        <h2 class="font-display text-white text-3xl uppercase">{heading}</h2>
+        <div class="flex" data-glide-el="controls">
+          <button
+            data-glide-dir="<"
+            aria-label={prevLabel}
+            class="font-display text-white/50 hover:text-white text-xs uppercase px-4 py-2 border border-white/20 hover:border-white/60 rounded-full transition-colors duration-200 flex items-center gap-1.5 mr-2"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            {prevLabel}
+          </button>
+          <button
+            data-glide-dir=">"
+            aria-label={nextLabel}
+            class="font-display text-white/50 hover:text-white text-xs uppercase px-4 py-2 border border-white/20 hover:border-white/60 rounded-full transition-colors duration-200 flex items-center gap-1.5"
+          >
+            {nextLabel}
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Slider track -->
+      <div class="glide__track overflow-hidden" data-glide-el="track">
+        <ul class="glide__slides">
+          {projects.map(project => (
+            <li class="glide__slide">
+              <ProjectCard
+                project={project}
+                viewLabel={viewLabel}
+                sourceLabel={sourceLabel}
+              />
+            </li>
+          ))}
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  // spec: specs/14-projects-section.md
+  import Glide, { Controls, Breakpoints } from '@glidejs/glide/dist/glide.modular.esm'
+
+  new Glide('.glide', {
+    type: 'slider',
+    perView: 3,
+    gap: 0,
+    bound: true,
+    breakpoints: {
+      1024: { perView: 2 },
+      640:  { perView: 1 },
+    },
+  }).mount({ Controls, Breakpoints })
+</script>

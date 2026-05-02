@@ -1,6 +1,6 @@
 > # Jahiker Rojas - Fullstack Web Developer
 
-- I'm a 4 years experience Web Developer and I'm working contributing to frontend and backend for building web applications. I Love to learn new technologies and exploring content about the tech world.
+- I'm a Fullstack Developer and I'm working contributing to frontend and backend for building web applications. I Love to learn new technologies and exploring content about the tech world.
 
 - How to reach me:
 
@@ -50,4 +50,3 @@
 > ### My Stats
 
 [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=jahiker&theme=dark)](https://git.io/streak-stats)
-
