@@ -37,16 +37,18 @@ const stats = [
         </div>
 
         <!-- Stats row -->
-        <div class="flex border-t border-white/20">
-          {stats.map((stat, i) => (
-            <div class:list={[
-              'flex-1 px-6 py-6 flex flex-col gap-1',
-              i < stats.length - 1 ? 'border-r border-white/20' : '',
-            ]}>
-              <span class="font-display text-primary text-2xl lg:text-3xl uppercase">{stat.value}</span>
-              <span class="font-display text-white/40 text-xs uppercase">{stat.label}</span>
-            </div>
-          ))}
+        <div class="overflow-x-auto border-t border-white/20 [&::-webkit-scrollbar]:hidden [scrollbar-width:none] [-ms-overflow-style:none]">
+          <div class="flex min-w-max lg:min-w-0">
+            {stats.map((stat, i) => (
+              <div class:list={[
+                'px-6 py-6 flex flex-col gap-1 min-w-[140px] lg:min-w-0 lg:flex-1',
+                i < stats.length - 1 ? 'border-r border-white/20' : '',
+              ]}>
+                <span class="font-display text-primary text-2xl lg:text-3xl uppercase">{stat.value}</span>
+                <span class="font-display text-white/40 text-xs uppercase">{stat.label}</span>
+              </div>
+            ))}
+          </div>
         </div>
 
       </div>

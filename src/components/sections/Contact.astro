@@ -19,7 +19,7 @@ const subheading = locale === 'es'
 
       <!-- Heading -->
       <div class="flex flex-col gap-3">
-        <h2 class="font-display text-white uppercase text-4xl lg:text-7xl xl:text-8xl leading-none">
+        <h2 class="font-display text-white uppercase text-3xl lg:text-7xl xl:text-8xl leading-none">
           {contact.heading}
         </h2>
         <p class="font-display text-white/40 text-sm lg:text-base uppercase">
@@ -30,7 +30,7 @@ const subheading = locale === 'es'
       <!-- Email CTA -->
       <a
         href={`mailto:${contact.email}`}
-        class="font-display text-primary hover:text-white text-xl lg:text-3xl uppercase transition-colors duration-200 inline-flex items-center gap-3 group"
+        class="font-display text-primary hover:text-white text-sm lg:text-3xl uppercase transition-colors duration-200 inline-flex items-center gap-3 group break-all"
       >
         {contact.email}
         <span aria-hidden="true" class="group-hover:translate-x-1 transition-transform duration-200">&rarr;</span>

@@ -143,14 +143,14 @@ const esUrl = getRelativeLocaleUrl('es', '/')
         <a
           href={enUrl}
           class:list={[
-            'font-display text-xs uppercase px-6 py-4 flex items-center border-r border-white/20 transition-colors duration-200',
+            'font-display text-xs uppercase px-4 py-4 flex items-center border-r border-white/20 transition-colors duration-200',
             locale === 'en' ? 'text-primary' : 'text-white/40 hover:text-white',
           ]}
         >EN</a>
         <a
           href={esUrl}
           class:list={[
-            'font-display text-xs uppercase px-6 py-4 flex items-center border-r border-white/20 transition-colors duration-200',
+            'font-display text-xs uppercase px-4 py-4 flex items-center border-r border-white/20 transition-colors duration-200',
             locale === 'es' ? 'text-primary' : 'text-white/40 hover:text-white',
           ]}
         >ES</a>
@@ -158,24 +158,23 @@ const esUrl = getRelativeLocaleUrl('es', '/')
           href={`https://github.com/${contact.github}`}
           target="_blank"
           rel="noopener noreferrer"
-          class="font-display text-white/60 hover:text-white text-xs uppercase px-6 py-4 flex items-center border-r border-white/20 transition-colors duration-200"
+          class="font-display text-white/60 hover:text-white text-xs uppercase px-4 py-4 flex items-center border-r border-white/20 transition-colors duration-200"
         >GitHub</a>
         <a
           href={`https://linkedin.com/in/${contact.linkedin}`}
           target="_blank"
           rel="noopener noreferrer"
-          class="font-display text-white/60 hover:text-white text-xs uppercase px-6 py-4 flex items-center border-r border-white/20 transition-colors duration-200"
+          class="font-display text-white/60 hover:text-white text-xs uppercase px-4 py-4 flex items-center border-r border-white/20 transition-colors duration-200"
         >LinkedIn</a>
         <!-- A11y toggle mobile -->
         <button
           id="a11y-toggle-mobile"
           aria-label="Toggle high contrast accessibility mode"
           aria-pressed="false"
-          class="px-6 py-4 flex items-center gap-2 text-white/60 hover:text-primary transition-colors duration-200 ml-auto"
+          class="px-4 py-4 flex items-center gap-2 text-white/60 hover:text-primary transition-colors duration-200 ml-auto"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="3"></circle>
-            <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"></path>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="18" height="18" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" />
           </svg>
           <span class="font-display text-xs uppercase">A11y</span>
         </button>
