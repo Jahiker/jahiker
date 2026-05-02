@@ -1,8 +1,12 @@
 ---
-// spec: specs/00-project-cleanup.md, specs/02-astro-i18n-layout.md
+// spec: specs/17-pages-assembly.md
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/sections/Hero.astro";
-import Work from "../components/sections/Work.astro";
+import About from "../components/sections/About.astro";
+import Skills from "../components/sections/Skills.astro";
+import Projects from "../components/sections/Work.astro";
+import Experience from "../components/sections/Experience.astro";
+import Contact from "../components/sections/Contact.astro";
 ---
 
 <Layout
@@ -12,6 +16,10 @@ import Work from "../components/sections/Work.astro";
 >
   <main>
     <Hero />
-    <Work />
+    <About />
+    <Skills />
+    <Projects />
+    <Experience />
+    <Contact />
   </main>
 </Layout>

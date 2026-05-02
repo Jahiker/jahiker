@@ -1,5 +1,5 @@
 ---
-// spec: specs/00-project-cleanup.md, specs/02-astro-i18n-layout.md
+// spec: specs/18-seo-sitemap-qa.md
 import Header from "../components/global/Header.astro";
 import Footer from "../components/global/Footer.astro";
 import "../styles/global.css";
@@ -17,19 +17,54 @@ const {
 } = Astro.props;
 
 const base = import.meta.env.BASE_URL;
+const siteOrigin = (Astro.site?.href ?? 'https://jahiker.github.io').replace(/\/$/, '')
+
+const canonicalUrl = Astro.url.href
+const enUrl  = `${siteOrigin}${base}`
+const esUrl  = `${siteOrigin}${base}es/`
+const ogImage = `${siteOrigin}${base}images/avatar.jpeg`
 ---
 
 <!doctype html>
-<html lang={lang}>
+<html lang={lang} class="scroll-smooth lg:scroll-pt-16">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href={`${base}logo.svg`} />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Hreflang alternates -->
+    <link rel="alternate" hreflang="en" href={enUrl} />
+    <link rel="alternate" hreflang="es" href={esUrl} />
+    <link rel="alternate" hreflang="x-default" href={enUrl} />
+
+    <!-- Open Graph -->
+    <meta property="og:type"        content="website" />
+    <meta property="og:url"         content={canonicalUrl} />
+    <meta property="og:title"       content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image"       content={ogImage} />
+    <meta property="og:locale"      content={lang === 'es' ? 'es_ES' : 'en_US'} />
+    <meta property="og:site_name"   content="Jahiker Rojas" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card"        content="summary" />
+    <meta name="twitter:title"       content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image"       content={ogImage} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href={`${base}logo.svg`} />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://rsms.me/" />
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+
     <!-- A11y: restore high-contrast mode before first paint to prevent flash -->
     <script is:inline>
       try {
