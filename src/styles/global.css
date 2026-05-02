@@ -10,13 +10,12 @@
 }
 @font-face {
   font-family: "Basement";
-  src: url("../fonts/BSBlack.eot");
   src:
-    url("../fonts/BSBlack.eot?#iefix") format("embedded-opentype"),
     url("../fonts/BSBlack.woff2") format("woff2"),
     url("../fonts/BSBlack.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
   descent-override: 0%;
 }
 @keyframes marquee {
@@ -51,4 +50,67 @@
       transparent 6px
     ),
     linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+}
+
+/* spec: specs/03-accessibility-mode.md */
+
+/* A11y mode: maximum contrast dark (#000 bg / #fff text) + no animations */
+html[data-a11y="true"] body,
+html[data-a11y="true"] header,
+html[data-a11y="true"] footer,
+html[data-a11y="true"] main,
+html[data-a11y="true"] section,
+html[data-a11y="true"] nav,
+html[data-a11y="true"] div {
+  background-color: #000000 !important;
+  background-image: none !important;
+}
+
+html[data-a11y="true"] h1,
+html[data-a11y="true"] h2,
+html[data-a11y="true"] h3,
+html[data-a11y="true"] h4,
+html[data-a11y="true"] p,
+html[data-a11y="true"] span,
+html[data-a11y="true"] a,
+html[data-a11y="true"] li,
+html[data-a11y="true"] button {
+  color: #ffffff !important;
+}
+
+html[data-a11y="true"] a {
+  text-decoration: underline;
+}
+
+html[data-a11y="true"] *,
+html[data-a11y="true"] *::before,
+html[data-a11y="true"] *::after {
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* OS-level: respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* OS-level: respect prefers-contrast */
+@media (prefers-contrast: more) {
+  body {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+  }
+  * {
+    border-color: rgba(255, 255, 255, 0.6) !important;
+  }
 }

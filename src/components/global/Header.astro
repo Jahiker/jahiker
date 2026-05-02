@@ -1,3 +1,7 @@
+---
+// spec: specs/03-accessibility-mode.md
+---
+
 <header
   class="mx-auto border-white/20 border-t bg-black border-b justify-center lg:fixed lg:z-50 w-full"
 >
@@ -24,11 +28,58 @@
           >Linkedin</a
         >
         <a
-          href="mailto:your@name.com"
-          class="w-full bg-primary duration-200 font-display hover:bg-blacktext-white lg:w-auto px-6 py-4 sm:rounded-full text-black hover:text-white text-center text-xs uppercase"
-          >Resume</a
+          href="mailto:rojasjahiker@gmail.com"
+          class="w-full bg-primary duration-200 font-display hover:bg-black hover:text-white lg:w-auto px-6 py-4 sm:rounded-full text-black text-center text-xs uppercase"
+          >Contact</a
         >
+        <!-- A11y toggle — spec: specs/03-accessibility-mode.md -->
+        <button
+          id="a11y-toggle"
+          aria-label="Toggle high contrast accessibility mode"
+          aria-pressed="false"
+          class="w-full lg:w-auto px-4 py-4 sm:rounded-full border border-white/20 text-white hover:border-primary hover:text-primary duration-200 flex items-center justify-center gap-2 text-xs uppercase font-display"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"
+            ></path>
+          </svg>
+          <span class="lg:hidden">Accessibility</span>
+        </button>
       </div>
     </div>
   </div>
 </header>
+
+<script>
+  // spec: specs/03-accessibility-mode.md
+  const toggle = document.getElementById('a11y-toggle') as HTMLButtonElement | null;
+
+  if (toggle) {
+    const isActive = () =>
+      document.documentElement.getAttribute('data-a11y') === 'true';
+
+    // Sync button state with current a11y mode on load
+    toggle.setAttribute('aria-pressed', String(isActive()));
+
+    toggle.addEventListener('click', () => {
+      const next = !isActive();
+      document.documentElement.setAttribute('data-a11y', String(next));
+      try {
+        localStorage.setItem('A11Y_V1', String(next));
+      } catch (_) {}
+      toggle.setAttribute('aria-pressed', String(next));
+    });
+  }
+</script>
