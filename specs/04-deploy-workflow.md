@@ -1,5 +1,5 @@
 # Deploy Workflow (GitHub Actions → GitHub Pages)
-**Status:** Implemented
+**Status:** Verified
 **Roadmap:** #0.5 — E0 · Foundation
 **Depends on:** specs/00-project-cleanup.md
 
@@ -17,3 +17,4 @@ GitHub Actions workflow that builds the Astro site on every push to `master` and
 | Version | Date | Event | Notes |
 |---|---|---|---|
 | 1.0 | 2026-05-02 | Implemented | jr-exe-spec — GitHub Actions deploy workflow for Astro → GitHub Pages |
+| 1.0 | 2026-05-02 | Verified | jr-verify-spec — Coverage: 100% · Gaps: 0 |
