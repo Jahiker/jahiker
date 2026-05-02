@@ -58,8 +58,12 @@ const ogImage = `${siteOrigin}${base}images/avatar.jpeg`
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image"       content={ogImage} />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href={`${base}logo.svg`} />
+    <!-- Favicon (single SVG with embedded dark/light CSS) -->
+    <link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
+
+    <!-- Theme color -->
+    <meta name="theme-color" content="#1e1e1e" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#e7e7d8" media="(prefers-color-scheme: light)" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://rsms.me/" />
