@@ -2,11 +2,8 @@
   font-family: Basement, sans-serif;
   font-weight: 700;
 }
-@supports (font-variation-settings: normal) {
-  /* Use variable font if supported */
-  :root {
-    font-family: InterVariable, sans-serif;
-  }
+:root {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
 }
 @font-face {
   font-family: "Basement";

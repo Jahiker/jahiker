@@ -20,6 +20,7 @@ export interface Skill {
   name: string
   category: 'frontend' | 'backend' | 'tools' | 'other'
   icon?: string
+  color: string
 }
 
 export interface ExperienceItem {
