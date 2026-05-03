@@ -8,11 +8,9 @@ import ProjectCard from '../ui/ProjectCard.astro'
 const locale = Astro.currentLocale ?? 'en'
 const projects = locale === 'es' ? projectsEs : projectsEn
 
-const heading    = locale === 'es' ? 'Proyectos'    : 'Projects'
-const viewLabel  = locale === 'es' ? 'Ver proyecto' : 'View project'
-const sourceLabel = locale === 'es' ? 'Código'      : 'Source'
-const prevLabel  = locale === 'es' ? 'Anterior'     : 'Previous'
-const nextLabel  = locale === 'es' ? 'Siguiente'    : 'Next'
+const heading   = locale === 'es' ? 'Proyectos' : 'Projects'
+const prevLabel = locale === 'es' ? 'Anterior'  : 'Previous'
+const nextLabel = locale === 'es' ? 'Siguiente' : 'Next'
 ---
 
 <section id="projects" class="border-b border-white/20">
@@ -46,12 +44,11 @@ const nextLabel  = locale === 'es' ? 'Siguiente'    : 'Next'
       <!-- Slider track -->
       <div class="glide__track overflow-hidden" data-glide-el="track">
         <ul class="glide__slides">
-          {projects.map(project => (
+          {projects.map((project, idx) => (
             <li class="glide__slide">
               <ProjectCard
                 project={project}
-                viewLabel={viewLabel}
-                sourceLabel={sourceLabel}
+                index={idx}
               />
             </li>
           ))}
