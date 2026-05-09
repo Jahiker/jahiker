@@ -79,6 +79,12 @@ html[data-a11y="true"] a {
   text-decoration: underline;
 }
 
+/* spec: specs/11-hero-section.md */
+/* A11y mode: keep black text on .bg-primary buttons (CTA contrast) */
+html[data-a11y="true"] .bg-primary {
+  color: #000000 !important;
+}
+
 html[data-a11y="true"] *,
 html[data-a11y="true"] *::before,
 html[data-a11y="true"] *::after {

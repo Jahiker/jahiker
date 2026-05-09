@@ -11,43 +11,33 @@ import imgWeather from '../../images/projects/weather-react.png'
 
 export const projects: Project[] = [
   {
-    name: 'Pugstagram',
+    name: 'jr-toolkit',
     description:
-      'Una app social estilo Instagram para amantes de los pugs. Los usuarios pueden navegar y dar me gusta a fotos en un feed responsive.',
-    tags: ['react', 'graphql', 'css'],
-    image: imgPugstagram,
-    siteUrl: 'https://github.com/jahiker/pugstagram',
-    sourceCodeUrl: 'https://github.com/jahiker/pugstagram',
+      'Toolkit de Desarrollo Dirigido por Specs para Claude. De idea cruda a código verificado — un flujo estructurado completo para desarrollo asistido por IA. Define specs primero, implementa después, verifica al final.',
+    tags: ['claude', 'ai', 'npm', 'cli'],
+    image: imgPokedex, // placeholder — image is required by Project type but not rendered (spec 14 v2.x)
+    siteUrl: 'https://www.npmjs.com/package/@jahiker/claude-toolkit',
+    sourceCodeUrl: 'https://www.npmjs.com/package/@jahiker/claude-toolkit',
+    year: 2026,
+  },
+  {
+    name: 'Weather App',
+    description:
+      'Un dashboard del clima que obtiene pronósticos en tiempo real vía la API de OpenWeather y los muestra con una interfaz limpia y minimalista.',
+    tags: ['react', 'openweather api', 'css'],
+    image: imgWeather,
+    siteUrl: 'https://github.com/jahiker/weather-app',
+    sourceCodeUrl: 'https://github.com/jahiker/weather-app',
     year: 2022,
   },
   {
-    name: 'Pokédex',
+    name: 'Fly Booking',
     description:
-      'Una Pokédex web que permite explorar y buscar Pokémon usando datos de la PokéAPI, con una interfaz de tarjetas limpia y responsiva.',
-    tags: ['react', 'pokeapi', 'css'],
-    image: imgPokedex,
-    siteUrl: 'https://github.com/jahiker/pokedex',
-    sourceCodeUrl: 'https://github.com/jahiker/pokedex',
-    year: 2022,
-  },
-  {
-    name: 'Platzi Conf Merch',
-    description:
-      'Tienda de merchandising para Platzi Conf construida con React y un contexto global de carrito, con listado de productos y flujo de compra.',
-    tags: ['react', 'context api', 'css'],
-    image: imgPlatziConf,
-    siteUrl: 'https://github.com/jahiker/platzi-conf-merch',
-    sourceCodeUrl: 'https://github.com/jahiker/platzi-conf-merch',
-    year: 2021,
-  },
-  {
-    name: 'Cashflow App',
-    description:
-      'Un rastreador de finanzas personales para registrar ingresos y gastos, visualizar el historial de balance y mantener el control del dinero.',
-    tags: ['react', 'recharts', 'typescript'],
-    image: imgCashflow,
-    siteUrl: 'https://github.com/jahiker/cashflow',
-    sourceCodeUrl: 'https://github.com/jahiker/cashflow',
+      'Un concepto de UI para reserva de vuelos en React con selección de asientos, búsqueda de vuelos y flujo de reserva de varios pasos.',
+    tags: ['react', 'typescript', 'tailwind'],
+    image: imgFlyBooking,
+    siteUrl: 'https://github.com/jahiker/fly-booking',
+    sourceCodeUrl: 'https://github.com/jahiker/fly-booking',
     year: 2023,
   },
   {
@@ -61,23 +51,43 @@ export const projects: Project[] = [
     year: 2023,
   },
   {
-    name: 'Fly Booking',
+    name: 'Cashflow App',
     description:
-      'Un concepto de UI para reserva de vuelos en React con selección de asientos, búsqueda de vuelos y flujo de reserva de varios pasos.',
-    tags: ['react', 'typescript', 'tailwind'],
-    image: imgFlyBooking,
-    siteUrl: 'https://github.com/jahiker/fly-booking',
-    sourceCodeUrl: 'https://github.com/jahiker/fly-booking',
+      'Un rastreador de finanzas personales para registrar ingresos y gastos, visualizar el historial de balance y mantener el control del dinero.',
+    tags: ['react', 'recharts', 'typescript'],
+    image: imgCashflow,
+    siteUrl: 'https://github.com/jahiker/cashflow',
+    sourceCodeUrl: 'https://github.com/jahiker/cashflow',
     year: 2023,
   },
   {
-    name: 'Weather App',
+    name: 'Platzi Conf Merch',
     description:
-      'Un dashboard del clima que obtiene pronósticos en tiempo real vía la API de OpenWeather y los muestra con una interfaz limpia y minimalista.',
-    tags: ['react', 'openweather api', 'css'],
-    image: imgWeather,
-    siteUrl: 'https://github.com/jahiker/weather-app',
-    sourceCodeUrl: 'https://github.com/jahiker/weather-app',
+      'Tienda de merchandising para Platzi Conf construida con React y un contexto global de carrito, con listado de productos y flujo de compra.',
+    tags: ['react', 'context api', 'css'],
+    image: imgPlatziConf,
+    siteUrl: 'https://github.com/jahiker/platzi-conf-merch',
+    sourceCodeUrl: 'https://github.com/jahiker/platzi-conf-merch',
+    year: 2021,
+  },
+  {
+    name: 'Pokédex',
+    description:
+      'Una Pokédex web que permite explorar y buscar Pokémon usando datos de la PokéAPI, con una interfaz de tarjetas limpia y responsiva.',
+    tags: ['react', 'pokeapi', 'css'],
+    image: imgPokedex,
+    siteUrl: 'https://github.com/jahiker/pokedex',
+    sourceCodeUrl: 'https://github.com/jahiker/pokedex',
+    year: 2022,
+  },
+  {
+    name: 'Pugstagram',
+    description:
+      'Una app social estilo Instagram para amantes de los pugs. Los usuarios pueden navegar y dar me gusta a fotos en un feed responsive.',
+    tags: ['react', 'graphql', 'css'],
+    image: imgPugstagram,
+    siteUrl: 'https://github.com/jahiker/pugstagram',
+    sourceCodeUrl: 'https://github.com/jahiker/pugstagram',
     year: 2022,
   },
 ]
