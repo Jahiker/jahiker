@@ -1,6 +1,6 @@
 # Accessibility Mode (CSS vars + data-a11y + OS media queries)
 
-**Status:** Implemented | **Version:** 1.0 | **Date:** 2026-05-01 | **Author:** jr-exe-spec
+**Status:** Verified | **Version:** 1.0 | **Date:** 2026-05-01 | **Author:** jr-exe-spec
 **Roadmap:** #0.4 — E0 · Foundation
 **Depends on:** specs/01-types-tailwind-global.md (Implemented ✅), specs/02-astro-i18n-layout.md (Implemented ✅)
 
@@ -50,3 +50,4 @@ Page reload
 | Version | Date | Change | Author |
 |---|---|---|---|
 | 1.0 | 2026-05-01 | Implemented | jr-exe-spec — global.css a11y blocks + Header toggle button + script |
+| 1.0 | 2026-05-09 | Verified | jr-verify-spec — Coverage: 100% (7/7) · Gaps: 2 follow-ups (icon description drift "sun/burst" vs real Heroicons AdjustmentsHorizontalIcon; missing traceability comments in Header.astro & Layout.astro) |

@@ -1,4 +1,4 @@
-// spec: specs/13-skills-section.md
+// spec: specs/07-skills-data.md, specs/13-skills-section.md
 import type { Skill } from './types'
 
 export const skills: Skill[] = [

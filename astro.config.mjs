@@ -6,7 +6,7 @@ import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
-// spec: specs/00-project-cleanup.md, specs/02-astro-i18n-layout.md
+// spec: specs/00-project-cleanup.md, specs/02-astro-i18n-layout.md, specs/18-seo-sitemap-qa.md
 export default defineConfig({
   site: 'https://jahiker.github.io',
   base: '/jahiker',

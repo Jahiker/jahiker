@@ -1,6 +1,6 @@
 # Experience Section + TimelineItem UI
 
-**Status:** Implemented | **Version:** 1.1 | **Date:** 2026-05-02 | **Author:** jr-build-spec
+**Status:** Verified | **Version:** 1.1 | **Date:** 2026-05-02 | **Author:** jr-build-spec
 **Roadmap:** #1.11 — E3 · Sections
 **Depends on:** specs/02-astro-i18n-layout.md (Implemented ✅), specs/08-experience-data.md (Implemented ✅)
 
@@ -28,3 +28,4 @@ Experience section with vertical timeline layout. Two-column grid on desktop (pe
 |---|---|---|---|
 | 1.0 | 2026-05-02 | Created | jr-build-spec |
 | 1.1 | 2026-05-02 | Implemented | jr-exe-spec — two-column timeline, primary dot, stack pills, locale-aware |
+| 1.1 | 2026-05-09 | Verified | jr-verify-spec — Coverage: 100% (7/7) · Gaps: 0 · timeline responsive, defensive stack check para Eurofeed empty stack |

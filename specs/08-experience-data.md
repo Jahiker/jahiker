@@ -1,6 +1,6 @@
 # Experience Data Files — EN + ES
 
-**Status:** Implemented | **Version:** 1.1 | **Date:** 2026-05-02 | **Author:** jr-build-spec
+**Status:** Verified | **Version:** 1.1 | **Date:** 2026-05-02 | **Author:** jr-build-spec
 **Roadmap:** #1.4 — E1 · Data layer
 **Depends on:** specs/01-types-tailwind-global.md (Implemented ✅)
 
@@ -27,3 +27,4 @@ Create EN and ES experience data files with 6 career positions sourced from the 
 |---|---|---|---|
 | 1.0 | 2026-05-02 | Created | jr-build-spec |
 | 1.1 | 2026-05-02 | Implemented | jr-exe-spec — 6 positions EN/ES from CV, Softlimit placeholder desc |
+| 1.1 | 2026-05-09 | Verified | jr-verify-spec — Coverage: 100% (10/10) · Gaps: 0 · 6 positions consistentes EN/ES, periods con meses localizados, stacks idénticos por posición |

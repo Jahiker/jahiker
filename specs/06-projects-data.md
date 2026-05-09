@@ -1,6 +1,6 @@
 # Projects Data Files — EN + ES + Image Migration
 
-**Status:** Implemented | **Version:** 1.2 | **Date:** 2026-05-09 | **Author:** jr-iterate-spec
+**Status:** Verified | **Version:** 1.2 | **Date:** 2026-05-09 | **Author:** jr-iterate-spec
 **Roadmap:** #1.2 — E1 · Data layer
 **Depends on:** specs/01-types-tailwind-global.md (Implemented ✅)
 
@@ -205,3 +205,4 @@ src/images/projects/*.{png,jpg}
 | 1.1 | 2026-05-02 | Implemented | jr-exe-spec — 7 projects EN/ES + image migration from public/screenshots/ |
 | 1.2 | 2026-05-09 | Iterated | jr-iterate-spec — add jr-toolkit first; reverse the original 7; placeholder image reuse |
 | 1.2 | 2026-05-09 | Implemented | jr-exe-spec — jr-toolkit pinned first + 7 originals reversed in EN/ES; `astro check` clean (0 errors) |
+| 1.2 | 2026-05-09 | Verified | jr-verify-spec — Coverage: 100% (16 ACs + 2 NFRs literal-match) · Gaps: 0 · 8 projects en orden exacto, jr-toolkit placeholder OK |

@@ -1,6 +1,6 @@
 # Content Data Files — EN + ES (hero, about, nav, contact)
 
-**Status:** Implemented | **Version:** 1.1 | **Date:** 2026-05-02 | **Author:** jr-build-spec
+**Status:** Verified | **Version:** 1.1 | **Date:** 2026-05-02 | **Author:** jr-build-spec
 **Roadmap:** #1.1 — E1 · Data layer
 **Depends on:** specs/01-types-tailwind-global.md (Implemented ✅)
 
@@ -139,3 +139,4 @@ src/data/{locale}/content.ts
 |---|---|---|---|
 | 1.0 | 2026-05-01 | Created | jr-build-spec |
 | 1.1 | 2026-05-02 | Implemented | jr-exe-spec — EN + ES content data files with SiteContent type |
+| 1.1 | 2026-05-09 | Verified | jr-verify-spec — Coverage: 100% (12 ACs + 3 NFRs, todos literal-match) · Gaps: 0 |

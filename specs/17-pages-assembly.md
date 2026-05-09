@@ -1,6 +1,6 @@
 # Pages Assembly — EN index.astro + ES es/index.astro
 
-**Status:** Implemented | **Version:** 1.1 | **Date:** 2026-05-02 | **Author:** jr-build-spec
+**Status:** Verified | **Version:** 1.1 | **Date:** 2026-05-02 | **Author:** jr-build-spec
 **Roadmap:** #1.13 — E4 · Pages & SEO
 **Depends on:** specs/09–16 (all Implemented ✅)
 
@@ -41,3 +41,4 @@ Both pages fully assembled with all sections in order: Hero → About → Skills
 |---|---|---|---|
 | 1.0 | 2026-05-01 | Partial — Hero + Work only | jr-exe-spec (spec 02) |
 | 1.1 | 2026-05-02 | Implemented | jr-exe-spec — all 6 sections assembled, scroll-smooth + scroll-pt-16 |
+| 1.1 | 2026-05-09 | Verified | jr-verify-spec — Coverage: 100% (9/9) · Gaps: 1 trazabilidad (Layout.astro comment solo refleja spec 18, debería listar 02/03/17/18) |

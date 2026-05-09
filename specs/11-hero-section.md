@@ -1,6 +1,6 @@
 # Hero Section
 
-**Status:** Implemented | **Version:** 1.2 | **Date:** 2026-05-09 | **Author:** jr-iterate-spec
+**Status:** Verified | **Version:** 1.2 | **Date:** 2026-05-09 | **Author:** jr-iterate-spec
 **Roadmap:** #1.7 — E3 · Sections
 **Depends on:** specs/02-astro-i18n-layout.md (Implemented ✅), specs/03-accessibility-mode.md (Implemented ✅), specs/05-content-data.md (Implemented ✅)
 
@@ -63,3 +63,4 @@ The primary CTA button (`'See my work'` / `'Ver mi trabajo'`) renders with `bg-p
 | 1.1 | 2026-05-02 | Implemented | jr-exe-spec — locale-aware hero with greeting, name, tagline, CTA, social links |
 | 1.2 | 2026-05-09 | Iterated | jr-iterate-spec — a11y mode forces black text on `.bg-primary` buttons (CTA readability) |
 | 1.2 | 2026-05-09 | Implemented | jr-exe-spec — added `html[data-a11y="true"] .bg-primary { color: #000 !important }` to global.css; `astro check` clean |
+| 1.2 | 2026-05-09 | Verified | jr-verify-spec — Coverage: 100% (4 FR-01 ACs + 7 Summary v1.1 elementos) · Gaps: 0 |

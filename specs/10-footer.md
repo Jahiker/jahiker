@@ -1,6 +1,6 @@
 # Footer
 
-**Status:** Implemented | **Version:** 1.1 | **Date:** 2026-05-02 | **Author:** jr-build-spec
+**Status:** Verified | **Version:** 1.1 | **Date:** 2026-05-02 | **Author:** jr-build-spec
 **Roadmap:** #1.6 — E2 · Global UI
 **Depends on:** specs/05-content-data.md (Implemented ✅)
 
@@ -26,3 +26,4 @@ Footer with locale-aware nav links, social links (Email, GitHub, LinkedIn) from 
 |---|---|---|---|
 | 1.0 | 2026-05-01 | Partial — placeholder only | jr-exe-spec (spec 02) |
 | 1.1 | 2026-05-02 | Implemented | jr-exe-spec — nav links, social links, copyright, responsive layout |
+| 1.1 | 2026-05-09 | Verified | jr-verify-spec — Coverage: 100% (9/9) · Gaps: 0 · spec más limpia auditada hoy |
