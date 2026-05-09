@@ -1,12 +1,12 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 
-import tailwind from "@astrojs/tailwind";
+import tailwindcss from "@tailwindcss/vite";
 
 import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
-// spec: specs/00-project-cleanup.md, specs/02-astro-i18n-layout.md, specs/18-seo-sitemap-qa.md
+// spec: specs/00-project-cleanup.md, specs/02-astro-i18n-layout.md, specs/18-seo-sitemap-qa.md, specs/p2-05-tailwind-v4.md
 export default defineConfig({
   site: 'https://jahiker.github.io',
   base: '/jahiker',
@@ -17,8 +17,10 @@ export default defineConfig({
       prefixDefaultLocale: false,
     },
   },
+  vite: {
+    plugins: [tailwindcss()],
+  },
   integrations: [
-    tailwind(),
     sitemap({
       i18n: {
         defaultLocale: 'en',

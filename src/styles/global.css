@@ -1,3 +1,17 @@
+/* spec: specs/01-types-tailwind-global.md, specs/03-accessibility-mode.md, specs/11-hero-section.md, specs/p2-05-tailwind-v4.md */
+@import "tailwindcss";
+
+@theme {
+  /* Custom brand palette — preserved 1:1 from tailwind.config.mjs (v3) */
+  --color-primary: #d5ff40;
+  --color-error:   #ff8b00;
+  --color-eagle:   #afac95;
+
+  /* Tailwind defaults overridden — preserves v3 behavior */
+  --color-black:   #1e1e1e;
+  --color-white:   #e7e7d8;
+}
+
 .font-display {
   font-family: Basement, sans-serif;
   font-weight: 700;
