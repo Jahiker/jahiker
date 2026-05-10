@@ -1,5 +1,5 @@
 ---
-// spec: specs/11-hero-section.md
+// spec: specs/11-hero-section.md, specs/p2-01-dark-light-mode.md
 import { content as contentEn } from '../../data/en/content'
 import { content as contentEs } from '../../data/es/content'
 import Banner from '../ui/Banner.astro'
@@ -11,24 +11,24 @@ const resumeLabel = locale === 'es' ? 'Descargar CV' : 'Download Resume'
 const resumeUrl = `${import.meta.env.BASE_URL}/docs/JAHIKER-CV-2026.pdf`
 ---
 
-<section id="hero" class="border-b border-white/20">
-  <div class="mx-auto max-w-7xl border-x border-white/20">
+<section id="hero" class="border-b border-border">
+  <div class="mx-auto max-w-7xl border-x border-border">
 
     <!-- Main content -->
     <div class="gradient-grid px-8 pt-24 pb-16 lg:pt-40 lg:pb-24">
 
       <!-- Greeting -->
-      <p class="font-display text-white/50 text-xl lg:text-4xl uppercase tracking-widest mb-4">
+      <p class="font-display text-text-muted text-xl lg:text-4xl uppercase tracking-widest mb-4">
         {hero.greeting}
       </p>
 
       <!-- Name -->
-      <h1 class="font-display text-white uppercase text-5xl lg:text-8xl xl:text-9xl leading-none tracking-tight mb-6">
+      <h1 class="font-display text-text uppercase text-5xl lg:text-8xl xl:text-9xl leading-none tracking-tight mb-6">
         {hero.name}
       </h1>
 
       <!-- Tagline -->
-      <p class="font-display text-white/60 text-xl lg:text-3xl max-w-3xl mb-10 uppercase leading-snug">
+      <p class="font-display text-text-muted text-xl lg:text-3xl max-w-3xl mb-10 uppercase leading-snug">
         {hero.tagline}
       </p>
 
@@ -43,7 +43,7 @@ const resumeUrl = `${import.meta.env.BASE_URL}/docs/JAHIKER-CV-2026.pdf`
         <a
           href={resumeUrl}
           download
-          class="font-display text-white/60 hover:text-white border border-white/20 hover:border-white/60 text-xs uppercase px-6 py-4 rounded-full transition-colors duration-200 inline-flex items-center gap-2"
+          class="font-display text-text-muted hover:text-text border border-border hover:border-border-strong text-xs uppercase px-6 py-4 rounded-full transition-colors duration-200 inline-flex items-center gap-2"
         >
           {resumeLabel}
           <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -56,13 +56,13 @@ const resumeUrl = `${import.meta.env.BASE_URL}/docs/JAHIKER-CV-2026.pdf`
           href={`https://github.com/${contact.github}`}
           target="_blank"
           rel="noopener noreferrer"
-          class="font-display text-white/60 hover:text-white border border-white/20 hover:border-white/60 text-xs uppercase px-6 py-4 rounded-full transition-colors duration-200"
+          class="font-display text-text-muted hover:text-text border border-border hover:border-border-strong text-xs uppercase px-6 py-4 rounded-full transition-colors duration-200"
         >GitHub</a>
         <a
           href={`https://linkedin.com/in/${contact.linkedin}`}
           target="_blank"
           rel="noopener noreferrer"
-          class="font-display text-white/60 hover:text-white border border-white/20 hover:border-white/60 text-xs uppercase px-6 py-4 rounded-full transition-colors duration-200"
+          class="font-display text-text-muted hover:text-text border border-border hover:border-border-strong text-xs uppercase px-6 py-4 rounded-full transition-colors duration-200"
         >LinkedIn</a>
       </div>
 

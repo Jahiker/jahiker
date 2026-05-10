@@ -1,5 +1,5 @@
 ---
-// spec: specs/12-about-section.md
+// spec: specs/12-about-section.md, specs/p2-01-dark-light-mode.md
 import { content as contentEn } from '../../data/en/content'
 import { content as contentEs } from '../../data/es/content'
 import avatarSrc from '../../images/avatar.jpeg'
@@ -16,36 +16,36 @@ const stats = [
 ---
 
 <!-- Section heading -->
-<section id="about" class="border-b border-white/20">
-  <div class="mx-auto max-w-7xl border-x border-white/20">
+<section id="about" class="border-b border-border">
+  <div class="mx-auto max-w-7xl border-x border-border">
 
-    <div class="px-8 py-6 border-b border-white/20 gradient-grid">
-      <h2 class="font-display text-white text-3xl uppercase">{heading}</h2>
+    <div class="px-8 py-6 border-b border-border gradient-grid">
+      <h2 class="font-display text-text text-3xl uppercase">{heading}</h2>
     </div>
 
     <!-- Content -->
     <div class="flex flex-col lg:flex-row lg:items-stretch">
 
       <!-- Bio + stats -->
-      <div class="flex flex-col flex-1 border-b border-white/20 lg:border-b-0 lg:border-r">
+      <div class="flex flex-col flex-1 border-b border-border lg:border-b-0 lg:border-r">
 
         <!-- Bio text -->
         <div class="px-8 py-10 flex-1">
-          <p class="font-display text-white/70 text-lg lg:text-xl uppercase leading-relaxed">
+          <p class="font-display text-text text-lg lg:text-xl uppercase leading-relaxed">
             {about.text}
           </p>
         </div>
 
         <!-- Stats row -->
-        <div class="overflow-x-auto border-t border-white/20 [&::-webkit-scrollbar]:hidden [scrollbar-width:none] [-ms-overflow-style:none]">
+        <div class="overflow-x-auto border-t border-border [&::-webkit-scrollbar]:hidden [scrollbar-width:none] [-ms-overflow-style:none]">
           <div class="flex min-w-max lg:min-w-0">
             {stats.map((stat, i) => (
               <div class:list={[
                 'px-6 py-6 flex flex-col gap-1 min-w-[140px] lg:min-w-0 lg:flex-1',
-                i < stats.length - 1 ? 'border-r border-white/20' : '',
+                i < stats.length - 1 ? 'border-r border-border' : '',
               ]}>
                 <span class="font-display text-primary text-2xl lg:text-3xl uppercase">{stat.value}</span>
-                <span class="font-display text-white/40 text-xs uppercase">{stat.label}</span>
+                <span class="font-display text-text-subtle text-xs uppercase">{stat.label}</span>
               </div>
             ))}
           </div>

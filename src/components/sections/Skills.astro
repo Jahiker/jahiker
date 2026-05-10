@@ -1,5 +1,5 @@
 ---
-// spec: specs/13-skills-section.md
+// spec: specs/13-skills-section.md, specs/p2-01-dark-light-mode.md
 import { skills } from '../../data/skills'
 
 const locale = Astro.currentLocale ?? 'en'
@@ -16,24 +16,24 @@ const byCategory = (cat: typeof categories[number]) =>
   skills.filter((s): s is typeof s => s.category === cat)
 ---
 
-<section id="skills" class="border-b border-white/20">
-  <div class="mx-auto max-w-7xl border-x border-white/20">
+<section id="skills" class="border-b border-border">
+  <div class="mx-auto max-w-7xl border-x border-border">
 
     <!-- Heading -->
-    <div class="px-8 py-6 border-b border-white/20 gradient-grid">
-      <h2 class="font-display text-white text-3xl uppercase">{heading}</h2>
+    <div class="px-8 py-6 border-b border-border gradient-grid">
+      <h2 class="font-display text-text text-3xl uppercase">{heading}</h2>
     </div>
 
     <!-- Categories grid -->
     <div class="grid grid-cols-1 lg:grid-cols-3">
       {categories.map((cat, i) => (
         <div class:list={[
-          'flex flex-col border-b border-white/20 lg:border-b-0',
-          i < categories.length - 1 ? 'lg:border-r lg:border-white/20' : '',
+          'flex flex-col border-b border-border lg:border-b-0',
+          i < categories.length - 1 ? 'lg:border-r lg:border-border' : '',
         ]}>
 
           <!-- Category heading -->
-          <div class="px-8 py-5 border-b border-white/20">
+          <div class="px-8 py-5 border-b border-border">
             <p class="font-display text-primary text-xs uppercase">{categoryLabels[cat]}</p>
           </div>
 
@@ -42,7 +42,7 @@ const byCategory = (cat: typeof categories[number]) =>
             {byCategory(cat).map(skill => (
               <span
                 class="skill-badge inline-flex items-center border font-display text-xs uppercase px-4 py-2 rounded-full transition-colors duration-200"
-                style={`--skill-color: ${skill.color}; border-color: ${skill.color}50; color: #888888CC;`}
+                style={`--skill-color: ${skill.color}; border-color: ${skill.color}50; color: var(--color-skill-text);`}
               >
                 {skill.name}
               </span>
@@ -59,6 +59,6 @@ const byCategory = (cat: typeof categories[number]) =>
 <style>
   .skill-badge:hover {
     border-color: var(--skill-color) !important;
-    color: #888888FF !important;
+    color: var(--color-skill-text-hover) !important;
   }
 </style>

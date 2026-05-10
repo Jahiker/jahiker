@@ -1,5 +1,5 @@
 ---
-// spec: specs/02-astro-i18n-layout.md, specs/03-accessibility-mode.md, specs/17-pages-assembly.md, specs/18-seo-sitemap-qa.md
+// spec: specs/02-astro-i18n-layout.md, specs/03-accessibility-mode.md, specs/17-pages-assembly.md, specs/18-seo-sitemap-qa.md, specs/p2-01-dark-light-mode.md
 import Header from "../components/global/Header.astro";
 import Footer from "../components/global/Footer.astro";
 import "../styles/global.css";
@@ -68,16 +68,24 @@ const ogImage = `${siteOrigin}${base}/images/avatar.jpeg`
     <meta name="theme-color" content="#e7e7d8" media="(prefers-color-scheme: light)" />
 
 
-    <!-- A11y: restore high-contrast mode before first paint to prevent flash -->
+    <!-- A11y + Theme: restore from localStorage before first paint to prevent flash -->
     <script is:inline>
       try {
+        // spec 03 — a11y mode restore
         if (localStorage.getItem('A11Y_V1') === 'true') {
           document.documentElement.setAttribute('data-a11y', 'true');
+        }
+        // spec p2-01 — theme restore (localStorage wins; falls back to OS preference; else dark default)
+        var storedTheme = localStorage.getItem('THEME_V1');
+        if (storedTheme === 'light' || storedTheme === 'dark') {
+          document.documentElement.setAttribute('data-theme', storedTheme);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+          document.documentElement.setAttribute('data-theme', 'light');
         }
       } catch (_) {}
     </script>
   </head>
-  <body class="bg-black">
+  <body class="bg-bg">
     <Header />
     <slot />
     <Footer />

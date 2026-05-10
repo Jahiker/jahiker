@@ -1,5 +1,5 @@
 ---
-// spec: specs/03-accessibility-mode.md, specs/09-header.md
+// spec: specs/03-accessibility-mode.md, specs/09-header.md, specs/p2-01-dark-light-mode.md
 import { content as contentEn } from '../../data/en/content'
 import { content as contentEs } from '../../data/es/content'
 import { getRelativeLocaleUrl } from 'astro:i18n'
@@ -11,8 +11,8 @@ const enUrl = getRelativeLocaleUrl('en', '/')
 const esUrl = getRelativeLocaleUrl('es', '/')
 ---
 
-<header class="border-b border-white/20 bg-black lg:fixed lg:z-50 w-full top-0">
-  <div class="mx-auto max-w-7xl border-x border-white/20">
+<header class="border-b border-border bg-bg lg:fixed lg:z-50 w-full top-0">
+  <div class="mx-auto max-w-7xl border-x border-border">
 
     <!-- Main bar -->
     <div class="flex items-stretch justify-between">
@@ -21,7 +21,7 @@ const esUrl = getRelativeLocaleUrl('es', '/')
       <a
         href={enUrl}
         aria-label="Jahiker Rojas — home"
-        class="text-white px-8 py-5 inline-flex items-center hover:text-primary transition-colors duration-200"
+        class="text-text px-8 py-5 inline-flex items-center hover:text-primary transition-colors duration-200"
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" aria-hidden="true" class="h-7 w-auto">
           <text x="0" y="80" font-family="Basement, sans-serif" font-weight="700" font-size="80" fill="currentColor">JKR<tspan fill="#D5FF40">.</tspan></text>
@@ -31,11 +31,11 @@ const esUrl = getRelativeLocaleUrl('es', '/')
       <!-- Desktop: nav + actions -->
       <div class="hidden lg:flex items-stretch">
         <!-- Nav links -->
-        <nav aria-label="Main navigation" class="flex items-stretch border-x border-white/20">
+        <nav aria-label="Main navigation" class="flex items-stretch border-x border-border">
           {nav.map(link => (
             <a
               href={link.href}
-              class="font-display text-white/60 hover:text-white text-xs uppercase px-5 py-5 flex items-center transition-colors duration-200"
+              class="font-display text-text-muted hover:text-text text-xs uppercase px-5 py-5 flex items-center transition-colors duration-200"
             >
               {link.label}
             </a>
@@ -43,12 +43,12 @@ const esUrl = getRelativeLocaleUrl('es', '/')
         </nav>
 
         <!-- Lang switcher -->
-        <div class="flex items-stretch border-r border-white/20">
+        <div class="flex items-stretch border-r border-border">
           <a
             href={enUrl}
             class:list={[
               'font-display text-xs uppercase px-4 py-5 flex items-center transition-colors duration-200',
-              locale === 'en' ? 'text-primary' : 'text-white/40 hover:text-white',
+              locale === 'en' ? 'text-primary' : 'text-text-subtle hover:text-text',
             ]}
             aria-current={locale === 'en' ? 'true' : undefined}
           >EN</a>
@@ -56,7 +56,7 @@ const esUrl = getRelativeLocaleUrl('es', '/')
             href={esUrl}
             class:list={[
               'font-display text-xs uppercase px-4 py-5 flex items-center transition-colors duration-200',
-              locale === 'es' ? 'text-primary' : 'text-white/40 hover:text-white',
+              locale === 'es' ? 'text-primary' : 'text-text-subtle hover:text-text',
             ]}
             aria-current={locale === 'es' ? 'true' : undefined}
           >ES</a>
@@ -67,7 +67,7 @@ const esUrl = getRelativeLocaleUrl('es', '/')
           href={`https://github.com/${contact.github}`}
           target="_blank"
           rel="noopener noreferrer"
-          class="font-display text-white/60 hover:text-white text-xs uppercase px-5 py-5 flex items-center transition-colors duration-200 border-r border-white/20"
+          class="font-display text-text-muted hover:text-text text-xs uppercase px-5 py-5 flex items-center transition-colors duration-200 border-r border-border"
         >GitHub</a>
 
         <!-- LinkedIn -->
@@ -75,15 +75,32 @@ const esUrl = getRelativeLocaleUrl('es', '/')
           href={`https://linkedin.com/in/${contact.linkedin}`}
           target="_blank"
           rel="noopener noreferrer"
-          class="font-display text-white/60 hover:text-white text-xs uppercase px-5 py-5 flex items-center transition-colors duration-200 border-r border-white/20"
+          class="font-display text-text-muted hover:text-text text-xs uppercase px-5 py-5 flex items-center transition-colors duration-200 border-r border-border"
         >LinkedIn</a>
+
+        <!-- spec p2-01 — Theme toggle (desktop) — placed BEFORE a11y per DEC-02 -->
+        <button
+          id="theme-toggle"
+          aria-label="Toggle dark and light theme"
+          aria-pressed="false"
+          class="px-5 py-5 flex items-center text-text-muted hover:text-primary transition-colors duration-200 border-r border-border"
+        >
+          <!-- Sun icon: visible in dark mode (signals "switch to light") -->
+          <svg data-theme-icon="sun" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="18" height="18" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+          </svg>
+          <!-- Moon icon: visible in light mode (signals "switch to dark") -->
+          <svg data-theme-icon="moon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="18" height="18" aria-hidden="true" class="hidden">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+          </svg>
+        </button>
 
         <!-- A11y toggle -->
         <button
           id="a11y-toggle"
           aria-label="Toggle high contrast accessibility mode"
           aria-pressed="false"
-          class="px-5 py-5 flex items-center gap-2 text-white/60 hover:text-primary transition-colors duration-200"
+          class="px-5 py-5 flex items-center gap-2 text-text-muted hover:text-primary transition-colors duration-200"
         >
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="18" height="18" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" />
@@ -98,7 +115,7 @@ const esUrl = getRelativeLocaleUrl('es', '/')
         aria-label="Toggle navigation menu"
         aria-expanded="false"
         aria-controls="mobile-menu"
-        class="lg:hidden px-6 py-5 text-white/60 hover:text-white transition-colors duration-200 flex items-center"
+        class="lg:hidden px-6 py-5 text-text-muted hover:text-text transition-colors duration-200 flex items-center"
       >
         <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -116,15 +133,15 @@ const esUrl = getRelativeLocaleUrl('es', '/')
     <!-- Mobile menu (collapsible) -->
     <div
       id="mobile-menu"
-      class="hidden lg:hidden border-t border-white/20 flex-col"
+      class="hidden lg:hidden border-t border-border flex-col"
       aria-hidden="true"
     >
       <!-- Nav links -->
-      <nav aria-label="Main navigation" class="flex flex-col border-b border-white/20">
+      <nav aria-label="Main navigation" class="flex flex-col border-b border-border">
         {nav.map(link => (
           <a
             href={link.href}
-            class="font-display text-white/60 hover:text-white text-xs uppercase px-8 py-4 border-b border-white/10 last:border-0 transition-colors duration-200"
+            class="font-display text-text-muted hover:text-text text-xs uppercase px-8 py-4 border-b border-border last:border-0 transition-colors duration-200"
           >
             {link.label}
           </a>
@@ -132,45 +149,59 @@ const esUrl = getRelativeLocaleUrl('es', '/')
       </nav>
 
       <!-- Bottom actions row -->
-      <div class="flex items-stretch border-b border-white/20">
+      <div class="flex items-stretch border-b border-border">
         <!-- Lang switcher -->
         <a
           href={enUrl}
           class:list={[
-            'font-display text-xs uppercase px-4 py-4 flex items-center border-r border-white/20 transition-colors duration-200',
-            locale === 'en' ? 'text-primary' : 'text-white/40 hover:text-white',
+            'font-display text-xs uppercase px-4 py-4 flex items-center border-r border-border transition-colors duration-200',
+            locale === 'en' ? 'text-primary' : 'text-text-subtle hover:text-text',
           ]}
         >EN</a>
         <a
           href={esUrl}
           class:list={[
-            'font-display text-xs uppercase px-4 py-4 flex items-center border-r border-white/20 transition-colors duration-200',
-            locale === 'es' ? 'text-primary' : 'text-white/40 hover:text-white',
+            'font-display text-xs uppercase px-4 py-4 flex items-center border-r border-border transition-colors duration-200',
+            locale === 'es' ? 'text-primary' : 'text-text-subtle hover:text-text',
           ]}
         >ES</a>
         <a
           href={`https://github.com/${contact.github}`}
           target="_blank"
           rel="noopener noreferrer"
-          class="font-display text-white/60 hover:text-white text-xs uppercase px-4 py-4 flex items-center border-r border-white/20 transition-colors duration-200"
+          class="font-display text-text-muted hover:text-text text-xs uppercase px-4 py-4 flex items-center border-r border-border transition-colors duration-200"
         >GitHub</a>
         <a
           href={`https://linkedin.com/in/${contact.linkedin}`}
           target="_blank"
           rel="noopener noreferrer"
-          class="font-display text-white/60 hover:text-white text-xs uppercase px-4 py-4 flex items-center border-r border-white/20 transition-colors duration-200"
+          class="font-display text-text-muted hover:text-text text-xs uppercase px-4 py-4 flex items-center border-r border-border transition-colors duration-200"
         >LinkedIn</a>
-        <!-- A11y toggle mobile -->
+        <!-- spec p2-01 — Theme toggle mobile (icon-only per AC-03.6 Option A) — BEFORE a11y per DEC-02 -->
+        <button
+          id="theme-toggle-mobile"
+          aria-label="Toggle dark and light theme"
+          aria-pressed="false"
+          class="px-4 py-4 flex items-center text-text-muted hover:text-primary transition-colors duration-200 border-r border-border ml-auto"
+        >
+          <svg data-theme-icon="sun" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="18" height="18" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+          </svg>
+          <svg data-theme-icon="moon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="18" height="18" aria-hidden="true" class="hidden">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+          </svg>
+        </button>
+
+        <!-- spec 09 + p2-01 — A11y toggle mobile (icon-only per AC-03.6 Option A; "A11y" text label dropped) -->
         <button
           id="a11y-toggle-mobile"
           aria-label="Toggle high contrast accessibility mode"
           aria-pressed="false"
-          class="px-4 py-4 flex items-center gap-2 text-white/60 hover:text-primary transition-colors duration-200 ml-auto"
+          class="px-4 py-4 flex items-center text-text-muted hover:text-primary transition-colors duration-200"
         >
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="18" height="18" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" />
           </svg>
-          <span class="font-display text-xs uppercase">A11y</span>
         </button>
       </div>
     </div>
@@ -239,6 +270,39 @@ const esUrl = getRelativeLocaleUrl('es', '/')
       document.documentElement.setAttribute('data-a11y', String(next))
       try { localStorage.setItem('A11Y_V1', String(next)) } catch (_) {}
       syncToggles(next)
+    })
+  })
+
+  // spec p2-01 — Theme toggle (shared logic for desktop + mobile)
+  const currentTheme = (): 'light' | 'dark' => {
+    return document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark'
+  }
+
+  const syncThemeToggles = (theme: 'light' | 'dark') => {
+    const isLight = theme === 'light'
+    ;['theme-toggle', 'theme-toggle-mobile'].forEach(id => {
+      const btn = document.getElementById(id) as HTMLButtonElement | null
+      if (!btn) return
+      btn.setAttribute('aria-pressed', String(isLight))
+      // Sun icon visible in dark mode, moon icon visible in light mode
+      const sun = btn.querySelector('[data-theme-icon="sun"]') as SVGElement | null
+      const moon = btn.querySelector('[data-theme-icon="moon"]') as SVGElement | null
+      sun?.classList.toggle('hidden', isLight)
+      moon?.classList.toggle('hidden', !isLight)
+    })
+  }
+
+  syncThemeToggles(currentTheme())
+
+  ;['theme-toggle', 'theme-toggle-mobile'].forEach(id => {
+    const btn = document.getElementById(id) as HTMLButtonElement | null
+    btn?.addEventListener('click', () => {
+      // FR-06 — guard: no-op when a11y mode is ON
+      if (isActive()) return
+      const next: 'light' | 'dark' = currentTheme() === 'dark' ? 'light' : 'dark'
+      document.documentElement.setAttribute('data-theme', next)
+      try { localStorage.setItem('THEME_V1', next) } catch (_) {}
+      syncThemeToggles(next)
     })
   })
 </script>

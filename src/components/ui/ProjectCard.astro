@@ -1,5 +1,5 @@
 ---
-// spec: specs/14-projects-section.md
+// spec: specs/14-projects-section.md, specs/p2-01-dark-light-mode.md
 import type { Project } from '../../data/types'
 
 interface Props {
@@ -10,9 +10,9 @@ interface Props {
 const { project, index } = Astro.props
 const num = String(index + 1).padStart(3, '0')
 
-const cardClass = `group flex flex-col gap-4 p-6 min-h-[220px] bg-dark-mid border border-white/10 rounded-xl no-underline
+const cardClass = `group flex flex-col gap-4 p-6 min-h-[220px] bg-dark-mid border border-border rounded-xl no-underline
   transition-all duration-[120ms] ease-out
-  hover:bg-gray hover:border-white/30 hover:ring-2 hover:ring-white/20`
+  hover:bg-gray hover:border-border-strong hover:ring-2 hover:ring-border`
 ---
 
 {project.sourceCodeUrl ? (
@@ -23,22 +23,22 @@ const cardClass = `group flex flex-col gap-4 p-6 min-h-[220px] bg-dark-mid borde
     class={cardClass}
   >
     <div class="flex items-start justify-between">
-      <span class="font-mono text-[11px] uppercase tracking-widest text-white/40 group-hover:text-primary transition-colors duration-[120ms]">
+      <span class="font-mono text-[11px] uppercase tracking-widest text-text-subtle group-hover:text-primary transition-colors duration-[120ms]">
         {num} · {project.year}
       </span>
-      <span class="font-mono text-sm text-white/40 group-hover:text-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-[120ms]" aria-hidden="true">
+      <span class="font-mono text-sm text-text-subtle group-hover:text-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-[120ms]" aria-hidden="true">
         ↗
       </span>
     </div>
-    <h3 class="font-sans font-medium text-xl text-white tracking-tight leading-snug m-0">
+    <h3 class="font-sans font-medium text-xl text-text tracking-tight leading-snug m-0">
       {project.name}
     </h3>
-    <p class="text-sm text-white/50 leading-relaxed line-clamp-3 flex-1 m-0">
+    <p class="text-sm text-text-muted leading-relaxed line-clamp-3 flex-1 m-0">
       {project.description}
     </p>
     <div class="flex flex-wrap gap-1.5">
       {project.tags.map(tag => (
-        <span class="font-mono text-[11px] uppercase tracking-widest px-2.5 py-1 border border-white/20 rounded-full text-white/40">
+        <span class="font-mono text-[11px] uppercase tracking-widest px-2.5 py-1 border border-border rounded-full text-text-subtle">
           {tag}
         </span>
       ))}
@@ -47,19 +47,19 @@ const cardClass = `group flex flex-col gap-4 p-6 min-h-[220px] bg-dark-mid borde
 ) : (
   <article class={cardClass}>
     <div class="flex items-start justify-between">
-      <span class="font-mono text-[11px] uppercase tracking-widest text-white/40">
+      <span class="font-mono text-[11px] uppercase tracking-widest text-text-subtle">
         {num} · {project.year}
       </span>
     </div>
-    <h3 class="font-sans font-medium text-xl text-white tracking-tight leading-snug m-0">
+    <h3 class="font-sans font-medium text-xl text-text tracking-tight leading-snug m-0">
       {project.name}
     </h3>
-    <p class="text-sm text-white/50 leading-relaxed line-clamp-3 flex-1 m-0">
+    <p class="text-sm text-text-muted leading-relaxed line-clamp-3 flex-1 m-0">
       {project.description}
     </p>
     <div class="flex flex-wrap gap-1.5">
       {project.tags.map(tag => (
-        <span class="font-mono text-[11px] uppercase tracking-widest px-2.5 py-1 border border-white/20 rounded-full text-white/40">
+        <span class="font-mono text-[11px] uppercase tracking-widest px-2.5 py-1 border border-border rounded-full text-text-subtle">
           {tag}
         </span>
       ))}

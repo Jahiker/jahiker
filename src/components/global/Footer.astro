@@ -1,5 +1,5 @@
 ---
-// spec: specs/10-footer.md
+// spec: specs/10-footer.md, specs/p2-01-dark-light-mode.md
 import { content as contentEn } from '../../data/en/content'
 import { content as contentEs } from '../../data/es/content'
 
@@ -8,25 +8,25 @@ const { nav, contact } = locale === 'es' ? contentEs : contentEn
 const year = new Date().getFullYear()
 ---
 
-<footer class="border-t border-white/20 bg-black">
-  <div class="mx-auto max-w-7xl border-x border-white/20">
+<footer class="border-t border-border bg-bg">
+  <div class="mx-auto max-w-7xl border-x border-border">
 
     <!-- Main row -->
-    <div class="flex flex-col lg:flex-row lg:items-stretch border-b border-white/20">
+    <div class="flex flex-col lg:flex-row lg:items-stretch border-b border-border">
 
       <!-- Logo -->
-      <div class="px-8 py-8 border-b border-white/20 lg:border-b-0 lg:border-r lg:flex lg:items-center lg:min-w-48">
-        <p class="font-display text-white text-xs uppercase">
+      <div class="px-8 py-8 border-b border-border lg:border-b-0 lg:border-r lg:flex lg:items-center lg:min-w-48">
+        <p class="font-display text-text text-xs uppercase">
           Jahiker Rojas <span aria-hidden="true">&rarr;</span>
         </p>
       </div>
 
       <!-- Nav links -->
-      <nav aria-label="Footer navigation" class="flex flex-wrap border-b border-white/20 lg:border-b-0 lg:border-r">
+      <nav aria-label="Footer navigation" class="flex flex-wrap border-b border-border lg:border-b-0 lg:border-r">
         {nav.map(link => (
           <a
             href={link.href}
-            class="font-display text-white/40 hover:text-white text-xs uppercase px-6 py-5 flex items-center transition-colors duration-200 border-r border-white/10 last:border-0"
+            class="font-display text-text-subtle hover:text-text text-xs uppercase px-6 py-5 flex items-center transition-colors duration-200 border-r border-border last:border-0"
           >
             {link.label}
           </a>
@@ -38,21 +38,21 @@ const year = new Date().getFullYear()
         <a
           href={`mailto:${contact.email}`}
           aria-label="Send email"
-          class="font-display text-white/40 hover:text-white text-xs uppercase px-6 py-5 flex items-center border-r border-white/20 transition-colors duration-200"
+          class="font-display text-text-subtle hover:text-text text-xs uppercase px-6 py-5 flex items-center border-r border-border transition-colors duration-200"
         >Email</a>
         <a
           href={`https://github.com/${contact.github}`}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub profile"
-          class="font-display text-white/40 hover:text-white text-xs uppercase px-6 py-5 flex items-center border-r border-white/20 transition-colors duration-200"
+          class="font-display text-text-subtle hover:text-text text-xs uppercase px-6 py-5 flex items-center border-r border-border transition-colors duration-200"
         >GitHub</a>
         <a
           href={`https://linkedin.com/in/${contact.linkedin}`}
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn profile"
-          class="font-display text-white/40 hover:text-white text-xs uppercase px-6 py-5 flex items-center transition-colors duration-200"
+          class="font-display text-text-subtle hover:text-text text-xs uppercase px-6 py-5 flex items-center transition-colors duration-200"
         >LinkedIn</a>
       </div>
 
@@ -60,7 +60,7 @@ const year = new Date().getFullYear()
 
     <!-- Copyright -->
     <div class="px-8 py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-      <p class="text-white/30 text-xs font-display uppercase">
+      <p class="text-text-subtle text-xs font-display uppercase">
         &copy; {year} Jahiker Rojas &mdash; All rights reserved
       </p>
     </div>
