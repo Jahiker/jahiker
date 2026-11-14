@@ -22,6 +22,9 @@
   /* spec: p2-01 v1.1 FR-09 — Skills badge text (dark default; light override below) */
   --color-skill-text:       rgba(255, 255, 255, 0.55);
   --color-skill-text-hover: rgba(255, 255, 255, 0.95);
+  /* fix: specs/fixes/code-review-fixes.md — card hover surface + readable accent for hover states */
+  --color-bg-hover:         #2a2a2a;
+  --color-primary-ink:      #d5ff40;
 }
 
 /* spec: p2-01 v1.1 — Light theme overrides (off-white bg for high contrast) */
@@ -35,6 +38,8 @@ html[data-theme="light"] {
   --color-border-strong:    rgba(30, 30, 30, 0.5);
   --color-skill-text:       rgba(30, 30, 30, 0.65);
   --color-skill-text-hover: rgba(30, 30, 30, 0.95);
+  --color-bg-hover:         #f1f1f1;
+  --color-primary-ink:      #4d6600;
 }
 
 /* spec: p2-01 v1.1 FR-08 — Primary text outline in light theme (#d5ff40 has only ~1.6:1 contrast on light bg) */
@@ -66,7 +71,8 @@ html[data-a11y="true"] #theme-toggle-mobile {
   src:
     url("../fonts/BSBlack.woff2") format("woff2"),
     url("../fonts/BSBlack.woff") format("woff");
-  font-weight: normal;
+  /* fix: specs/fixes/code-review-fixes.md — match the 700 requested by .font-display (avoids synthetic bold) */
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
   descent-override: 0%;
@@ -137,8 +143,11 @@ html[data-a11y="true"] a {
 
 /* spec: specs/11-hero-section.md */
 /* A11y mode: keep black text on .bg-primary buttons (CTA contrast) */
-html[data-a11y="true"] .bg-primary {
+html[data-a11y="true"] .bg-primary,
+html[data-a11y="true"] .bg-primary * {
   color: #000000 !important;
+  /* fix: specs/fixes/code-review-fixes.md — keep accent surfaces (timeline dot, CTA) over the `div` blackout rule */
+  background-color: var(--color-primary) !important;
 }
 
 html[data-a11y="true"] *,
@@ -163,13 +172,48 @@ html[data-a11y="true"] *::after {
   }
 }
 
-/* OS-level: respect prefers-contrast */
+/* OS-level: respect prefers-contrast
+   fix: specs/fixes/code-review-fixes.md — keep the visitor's theme and push it to maximum contrast via tokens */
 @media (prefers-contrast: more) {
-  body {
-    background-color: #000000 !important;
-    color: #ffffff !important;
+  :root {
+    --color-bg:               #000000;
+    --color-bg-elevated:      #000000;
+    --color-bg-hover:         #1a1a1a;
+    --color-text:             #ffffff;
+    --color-text-muted:       #ffffff;
+    --color-text-subtle:      #ffffff;
+    --color-border:           rgba(255, 255, 255, 0.6);
+    --color-border-strong:    #ffffff;
+    --color-skill-text:       #ffffff;
+    --color-skill-text-hover: #ffffff;
   }
-  * {
-    border-color: rgba(255, 255, 255, 0.6) !important;
+  html[data-theme="light"] {
+    --color-bg:               #ffffff;
+    --color-bg-elevated:      #ffffff;
+    --color-bg-hover:         #ebebeb;
+    --color-text:             #000000;
+    --color-text-muted:       #000000;
+    --color-text-subtle:      #000000;
+    --color-border:           rgba(0, 0, 0, 0.6);
+    --color-border-strong:    #000000;
+    --color-skill-text:       #000000;
+    --color-skill-text-hover: #000000;
   }
+}
+
+/* fix: specs/fixes/code-review-fixes.md — a11y mode sets the tokens too, so text that inherits
+   from a `div` (e.g. the Banner marquee) turns white. Kept last so it wins over the
+   light theme and prefers-contrast blocks (same specificity, later in source). */
+html[data-a11y="true"] {
+  --color-bg:               #000000;
+  --color-bg-elevated:      #000000;
+  --color-bg-hover:         #000000;
+  --color-text:             #ffffff;
+  --color-text-muted:       #ffffff;
+  --color-text-subtle:      #ffffff;
+  --color-border:           rgba(255, 255, 255, 0.4);
+  --color-border-strong:    #ffffff;
+  --color-primary-ink:      #d5ff40;
+  --color-skill-text:       #ffffff;
+  --color-skill-text-hover: #ffffff;
 }

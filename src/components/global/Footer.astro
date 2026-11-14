@@ -6,6 +6,10 @@ import { content as contentEs } from '../../data/es/content'
 const locale = Astro.currentLocale ?? 'en'
 const { nav, contact } = locale === 'es' ? contentEs : contentEn
 const year = new Date().getFullYear()
+// fix: specs/fixes/code-review-fixes.md — localized UI labels
+const labels = locale === 'es'
+  ? { footerNav: 'Navegación del pie de página', email: 'Enviar correo', github: 'Perfil de GitHub', linkedin: 'Perfil de LinkedIn', rights: 'Todos los derechos reservados' }
+  : { footerNav: 'Footer navigation', email: 'Send email', github: 'GitHub profile', linkedin: 'LinkedIn profile', rights: 'All rights reserved' }
 ---
 
 <footer class="border-t border-border bg-bg">
@@ -22,7 +26,7 @@ const year = new Date().getFullYear()
       </div>
 
       <!-- Nav links -->
-      <nav aria-label="Footer navigation" class="flex flex-wrap border-b border-border lg:border-b-0 lg:border-r">
+      <nav aria-label={labels.footerNav} class="flex flex-wrap border-b border-border lg:border-b-0 lg:border-r">
         {nav.map(link => (
           <a
             href={link.href}
@@ -37,21 +41,21 @@ const year = new Date().getFullYear()
       <div class="flex lg:ml-auto">
         <a
           href={`mailto:${contact.email}`}
-          aria-label="Send email"
+          aria-label={labels.email}
           class="font-display text-text-subtle hover:text-text text-xs uppercase px-6 py-5 flex items-center border-r border-border transition-colors duration-200"
         >Email</a>
         <a
           href={`https://github.com/${contact.github}`}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="GitHub profile"
+          aria-label={labels.github}
           class="font-display text-text-subtle hover:text-text text-xs uppercase px-6 py-5 flex items-center border-r border-border transition-colors duration-200"
         >GitHub</a>
         <a
           href={`https://linkedin.com/in/${contact.linkedin}`}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="LinkedIn profile"
+          aria-label={labels.linkedin}
           class="font-display text-text-subtle hover:text-text text-xs uppercase px-6 py-5 flex items-center transition-colors duration-200"
         >LinkedIn</a>
       </div>
@@ -61,7 +65,7 @@ const year = new Date().getFullYear()
     <!-- Copyright -->
     <div class="px-8 py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
       <p class="text-text-subtle text-xs font-display uppercase">
-        &copy; {year} Jahiker Rojas &mdash; All rights reserved
+        &copy; {year} Jahiker Rojas &mdash; {labels.rights}
       </p>
     </div>
 

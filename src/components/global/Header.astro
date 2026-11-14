@@ -9,6 +9,11 @@ const { nav, contact } = locale === 'es' ? contentEs : contentEn
 
 const enUrl = getRelativeLocaleUrl('en', '/')
 const esUrl = getRelativeLocaleUrl('es', '/')
+const homeUrl = getRelativeLocaleUrl(locale, '/')
+// fix: specs/fixes/code-review-fixes.md — localized accessible names
+const labels = locale === 'es'
+  ? { home: 'Jahiker Rojas — inicio', mainNav: 'Navegación principal', menu: 'Abrir o cerrar el menú de navegación', theme: 'Cambiar entre tema oscuro y claro', a11y: 'Activar o desactivar el modo de alto contraste' }
+  : { home: 'Jahiker Rojas — home', mainNav: 'Main navigation', menu: 'Toggle navigation menu', theme: 'Toggle dark and light theme', a11y: 'Toggle high contrast accessibility mode' }
 ---
 
 <header class="border-b border-border bg-bg lg:fixed lg:z-50 w-full top-0">
@@ -19,9 +24,9 @@ const esUrl = getRelativeLocaleUrl('es', '/')
 
       <!-- Logo -->
       <a
-        href={enUrl}
-        aria-label="Jahiker Rojas — home"
-        class="text-text px-8 py-5 inline-flex items-center hover:text-primary transition-colors duration-200"
+        href={homeUrl}
+        aria-label={labels.home}
+        class="text-text px-8 py-5 inline-flex items-center hover:text-primary-ink transition-colors duration-200"
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100" aria-hidden="true" class="h-7 w-auto">
           <text x="0" y="80" font-family="Basement, sans-serif" font-weight="700" font-size="80" fill="currentColor">JKR<tspan fill="#D5FF40">.</tspan></text>
@@ -31,7 +36,7 @@ const esUrl = getRelativeLocaleUrl('es', '/')
       <!-- Desktop: nav + actions -->
       <div class="hidden lg:flex items-stretch">
         <!-- Nav links -->
-        <nav aria-label="Main navigation" class="flex items-stretch border-x border-border">
+        <nav aria-label={labels.mainNav} class="flex items-stretch border-x border-border">
           {nav.map(link => (
             <a
               href={link.href}
@@ -81,9 +86,9 @@ const esUrl = getRelativeLocaleUrl('es', '/')
         <!-- spec p2-01 — Theme toggle (desktop) — placed BEFORE a11y per DEC-02 -->
         <button
           id="theme-toggle"
-          aria-label="Toggle dark and light theme"
+          aria-label={labels.theme}
           aria-pressed="false"
-          class="px-5 py-5 flex items-center text-text-muted hover:text-primary transition-colors duration-200 border-r border-border"
+          class="px-5 py-5 flex items-center text-text-muted hover:text-primary-ink transition-colors duration-200 border-r border-border"
         >
           <!-- Sun icon: visible in dark mode (signals "switch to light") -->
           <svg data-theme-icon="sun" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="18" height="18" aria-hidden="true">
@@ -98,9 +103,9 @@ const esUrl = getRelativeLocaleUrl('es', '/')
         <!-- A11y toggle -->
         <button
           id="a11y-toggle"
-          aria-label="Toggle high contrast accessibility mode"
+          aria-label={labels.a11y}
           aria-pressed="false"
-          class="px-5 py-5 flex items-center gap-2 text-text-muted hover:text-primary transition-colors duration-200"
+          class="px-5 py-5 flex items-center gap-2 text-text-muted hover:text-primary-ink transition-colors duration-200"
         >
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="18" height="18" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" />
@@ -112,7 +117,7 @@ const esUrl = getRelativeLocaleUrl('es', '/')
       <!-- Mobile: hamburger -->
       <button
         id="mobile-menu-toggle"
-        aria-label="Toggle navigation menu"
+        aria-label={labels.menu}
         aria-expanded="false"
         aria-controls="mobile-menu"
         class="lg:hidden px-6 py-5 text-text-muted hover:text-text transition-colors duration-200 flex items-center"
@@ -137,7 +142,7 @@ const esUrl = getRelativeLocaleUrl('es', '/')
       aria-hidden="true"
     >
       <!-- Nav links -->
-      <nav aria-label="Main navigation" class="flex flex-col border-b border-border">
+      <nav aria-label={labels.mainNav} class="flex flex-col border-b border-border">
         {nav.map(link => (
           <a
             href={link.href}
@@ -180,9 +185,9 @@ const esUrl = getRelativeLocaleUrl('es', '/')
         <!-- spec p2-01 — Theme toggle mobile (icon-only per AC-03.6 Option A) — BEFORE a11y per DEC-02 -->
         <button
           id="theme-toggle-mobile"
-          aria-label="Toggle dark and light theme"
+          aria-label={labels.theme}
           aria-pressed="false"
-          class="px-4 py-4 flex items-center text-text-muted hover:text-primary transition-colors duration-200 border-r border-border ml-auto"
+          class="px-4 py-4 flex items-center text-text-muted hover:text-primary-ink transition-colors duration-200 border-r border-border ml-auto"
         >
           <svg data-theme-icon="sun" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="18" height="18" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
@@ -195,9 +200,9 @@ const esUrl = getRelativeLocaleUrl('es', '/')
         <!-- spec 09 + p2-01 — A11y toggle mobile (icon-only per AC-03.6 Option A; "A11y" text label dropped) -->
         <button
           id="a11y-toggle-mobile"
-          aria-label="Toggle high contrast accessibility mode"
+          aria-label={labels.a11y}
           aria-pressed="false"
-          class="px-4 py-4 flex items-center text-text-muted hover:text-primary transition-colors duration-200"
+          class="px-4 py-4 flex items-center text-text-muted hover:text-primary-ink transition-colors duration-200"
         >
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="18" height="18" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" />

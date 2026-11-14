@@ -10,9 +10,9 @@ interface Props {
 const { project, index } = Astro.props
 const num = String(index + 1).padStart(3, '0')
 
-const cardClass = `group flex flex-col gap-4 p-6 min-h-[220px] bg-dark-mid border border-border rounded-xl no-underline
+const cardClass = `group flex flex-col gap-4 p-6 min-h-[220px] bg-bg-elevated border border-border rounded-xl no-underline
   transition-all duration-[120ms] ease-out
-  hover:bg-gray hover:border-border-strong hover:ring-2 hover:ring-border`
+  hover:bg-bg-hover hover:border-border-strong hover:ring-2 hover:ring-border`
 ---
 
 {project.sourceCodeUrl ? (
@@ -23,10 +23,10 @@ const cardClass = `group flex flex-col gap-4 p-6 min-h-[220px] bg-dark-mid borde
     class={cardClass}
   >
     <div class="flex items-start justify-between">
-      <span class="font-mono text-[11px] uppercase tracking-widest text-text-subtle group-hover:text-primary transition-colors duration-[120ms]">
+      <span class="font-mono text-[11px] uppercase tracking-widest text-text-subtle group-hover:text-primary-ink transition-colors duration-[120ms]">
         {num} · {project.year}
       </span>
-      <span class="font-mono text-sm text-text-subtle group-hover:text-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-[120ms]" aria-hidden="true">
+      <span class="font-mono text-sm text-text-subtle group-hover:text-primary-ink group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-[120ms]" aria-hidden="true">
         ↗
       </span>
     </div>
