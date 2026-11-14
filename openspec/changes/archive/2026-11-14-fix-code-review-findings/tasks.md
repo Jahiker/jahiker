@@ -1,7 +1,7 @@
 ## 1. Baseline
 
 - [x] 1.1 Run `npm ci && npm run build` and keep `dist/og/en.png` plus screenshots of the home page (dark, light, a11y on) as the "before" reference
-- [ ] 1.2 Confirm with the owner the open questions in design.md: Contact subheading message, `--color-primary-ink` and `--color-bg-hover` values, logo dot colour, OG font
+- [x] 1.2 Confirm with the owner the open questions in design.md (owner accepted the implemented defaults, 2026-11-14): Contact subheading message, `--color-primary-ink` and `--color-bg-hover` values, logo dot colour, OG font
 
 ## 2. Quick fixes (one line each)
 
